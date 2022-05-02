@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShetBajarApplication {
+public class FarmMarketApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShetBajarApplication.class, args);		
+		SpringApplication.run(FarmMarketApplication.class, args);		
 	}
+	
 }
