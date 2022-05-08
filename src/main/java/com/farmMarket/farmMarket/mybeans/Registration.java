@@ -1,4 +1,4 @@
-package com.shetbajar.shetBajar.mybeans;
+package com.farmMarket.farmMarket.mybeans;
 
 public class Registration {
 	private String userid;
@@ -25,12 +25,23 @@ public class Registration {
 		address="";
 		
 	}
+	
+
+	public String getGen() {
+		return gen;
+	}
+
 
 	public String getUserid() {
 		return userid;
 	}
 
 	public void setUserid(String userid) {
+		String mob=String.valueOf(getMobno());
+		String adh=String.valueOf(getAadharid());
+		String mix=(mob.substring(0, 3))+adh.substring(0,3);
+		userid+=mix;
+		
 		this.userid = userid;
 	}
 
@@ -96,11 +107,5 @@ public class Registration {
 
 	
 	
-	@Override
-	public String toString() {
-		return "Registration [userid=" + userid + ", passwd=" + passwd + ", usernm=" + usernm + ", email=" + email
-				+ ", gen=" + gen + ", mobno=" + mobno + ", dob=" + dob + ", aadharid=" + aadharid + ", address="
-				+ address + "]";
-	}
 
 }

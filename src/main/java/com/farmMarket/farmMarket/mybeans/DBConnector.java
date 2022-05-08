@@ -1,4 +1,4 @@
-package com.shetbajar.shetBajar.mybeans;
+package com.farmMarket.farmMarket.mybeans;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

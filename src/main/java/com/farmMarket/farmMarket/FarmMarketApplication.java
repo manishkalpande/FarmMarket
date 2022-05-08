@@ -1,4 +1,4 @@
-package com.shetbajar.shetBajar;
+package com.farmMarket.farmMarket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
