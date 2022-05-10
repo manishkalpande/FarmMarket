@@ -2,6 +2,11 @@ package com.farmMarket.farmMarket.controller;
 
 import java.sql.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.DefaultBootstrapContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +21,15 @@ import com.farmMarket.farmMarket.mybeans.PasswordHashing;
 import com.farmMarket.farmMarket.mybeans.Registration;
 
 @Controller
-public class TestController {
-
+public class TestController 
+{
+//	@Autowired
+//	HttpServletRequest request;
+//	@Autowired
+//	HttpServletResponse response;
+//	@Autowired
+//	HttpSession ses=request.getSession(true);
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String firstLine() {
 		return "home";
@@ -49,6 +61,7 @@ public class TestController {
 			rs = pst.executeQuery();
 
 			if (rs.next()) {
+			//	ses.setAttribute("userid", rs.getNString(0));
 				check = true;
 			} else {
 				check = false;
@@ -60,17 +73,22 @@ public class TestController {
 		return check ? "home" : "failure";
 	}
 
-	@RequestMapping(path = "register", method = RequestMethod.GET)
+	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public String register() {
 		return "registration";
 	}
 
-	@RequestMapping(path = "registrationcu", method = RequestMethod.POST)
+	@RequestMapping(value = "/registrationcu", method = RequestMethod.POST)
 	public String registration(@ModelAttribute Registration reg, Model model) {
+		System.out.println("MAnish");
 		String mob = String.valueOf(reg.getMobno());
 		String adh = String.valueOf(reg.getAadharid());
 		String userid = (mob.substring(0, 3)) + adh.substring(0, 3);
-
+		
+		
+		System.out.println(reg.getEmail());
+		System.out.println(reg.getUsernm());
+		
 		Connection con;
 		CallableStatement cb;
 		ResultSet rs;
@@ -93,7 +111,7 @@ public class TestController {
 			e.printStackTrace();
 		}
 
-		return "";
+		return "login";
 	}
 
 	@RequestMapping(path = "requestorder", method = RequestMethod.GET)
@@ -129,11 +147,12 @@ public class TestController {
 				if(x>0) {
 					System.out.println("order status updated in orders table");
 				}
-			}catch(Exception ex) {
-				ex.getStackTrace();
 			}
-		}
-		
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			
 		if (order.getOrderid().contentEquals("")) {
 			int min = 10000000;
 			int max = 99999999;
@@ -163,7 +182,16 @@ public class TestController {
 			ex.getStackTrace();
 		}
 
+		
+	}
 		return "";
+	}
+	
+	@RequestMapping(path = "forgetpass", method = RequestMethod.GET)
+	public String callforgetpass() {
+		
+		
+		return "forgetpassword";
 	}
 	
 	
