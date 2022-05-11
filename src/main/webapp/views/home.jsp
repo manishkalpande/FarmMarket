@@ -181,13 +181,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -205,13 +205,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -229,13 +229,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -253,13 +253,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -277,13 +277,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -301,13 +301,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -325,13 +325,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -349,13 +349,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -373,13 +373,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -397,13 +397,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -421,13 +421,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -445,13 +445,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -469,13 +469,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -493,13 +493,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -517,13 +517,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -541,13 +541,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -565,13 +565,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -589,13 +589,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -613,13 +613,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -637,7 +637,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -661,13 +661,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -685,13 +685,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -709,13 +709,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -733,13 +733,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -757,13 +757,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -781,13 +781,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -805,13 +805,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -829,13 +829,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -853,13 +853,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -877,13 +877,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -901,13 +901,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -925,13 +925,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -949,13 +949,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -973,13 +973,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -997,13 +997,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1021,13 +1021,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1045,13 +1045,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1069,13 +1069,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1093,13 +1093,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
         <div class="box">
             
@@ -1116,13 +1116,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1140,13 +1140,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1164,13 +1164,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1188,13 +1188,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1212,13 +1212,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1236,13 +1236,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1260,13 +1260,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1284,13 +1284,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1308,13 +1308,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1332,13 +1332,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1356,13 +1356,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1380,13 +1380,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1404,13 +1404,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1428,13 +1428,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1452,13 +1452,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1476,13 +1476,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1500,13 +1500,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1524,13 +1524,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1548,13 +1548,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1572,13 +1572,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1596,13 +1596,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1620,13 +1620,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1644,13 +1644,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1668,13 +1668,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1692,13 +1692,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1716,13 +1716,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1740,13 +1740,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
                 <span> /kg </span>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <a href="#" class="btn">Order</a>
         </div>
 
         <div class="box">
@@ -1764,7 +1764,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1788,7 +1788,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1812,7 +1812,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1836,7 +1836,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1860,7 +1860,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1884,7 +1884,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1908,7 +1908,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1932,7 +1932,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1956,7 +1956,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1980,7 +1980,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <div class="price"> ₹10.50 <span> ₹13.20 </span> </div>
+            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -2051,7 +2051,7 @@
 
         <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
 
-        <input type="submit" value="send message" class="btn">
+        <input type="submit" value="Order" class="btn">
 
     </form>
 
