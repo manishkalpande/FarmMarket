@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.farmMarket.farmMarket.mybeans.SendMail;
 
 
+
 @RestController()
 public class EmailController {
 	

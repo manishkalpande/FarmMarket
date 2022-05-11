@@ -41,12 +41,15 @@ public class TestController
 	}
 
 	@RequestMapping(path = "logincust", method = RequestMethod.POST)
-	public String customer(@ModelAttribute Registration registration, Model model) {
-		String un = registration.getUsernm();
-		String pw = registration.getPasswd();
+	public String customer(@ModelAttribute("reg") Registration reg, Model model) {
+		String un = reg.getUsernm();
+		String pw = reg.getPasswd();
 		PasswordHashing ph = new PasswordHashing();
 		String unm = ph.doHashing(un);
 		String psw = ph.doHashing(pw);
+		
+		System.out.println(un+" "+unm);
+		System.out.println(pw+" "+psw);
 
 		Connection con;
 		PreparedStatement pst;
@@ -55,39 +58,47 @@ public class TestController
 
 		try {
 			con = DBConnector.getConnected();
-			pst = con.prepareStatement("select * from customers where cust_name=? and cust_pass=?");
-			pst.setString(1, unm);
-			pst.setString(2, psw);
+			pst = con.prepareStatement("select * from customers where cust_name=? and cust_pass=?;");
+			pst.setNString(1, unm);
+			pst.setNString(2, psw);
 			rs = pst.executeQuery();
+			System.out.println("try cha andart");
 
 			if (rs.next()) {
 			//	ses.setAttribute("userid", rs.getNString(0));
+				System.out.println("bundi");
 				check = true;
 			} else {
+				System.out.println("bhavika");
 				check = false;
 			}
 		} catch (Exception e) {
+			System.out.println("catch madhi");
 			System.out.println(e.getStackTrace());
 		}
 
 		return check ? "home" : "failure";
 	}
 
-	@RequestMapping(value = "register", method = RequestMethod.GET)
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String register() {
 		return "registration";
 	}
 
 	@RequestMapping(value = "/registrationcu", method = RequestMethod.POST)
-	public String registration(@ModelAttribute Registration reg, Model model) {
-		System.out.println("MAnish");
+	public String registration(@ModelAttribute("reg") Registration reg, Model model) {
+
 		String mob = String.valueOf(reg.getMobno());
 		String adh = String.valueOf(reg.getAadharid());
 		String userid = (mob.substring(0, 3)) + adh.substring(0, 3);
+		reg.setUserid(userid);
+		PasswordHashing ph = new PasswordHashing();
+		reg.setUsernm(ph.doHashing(reg.getUsernm()));
+		reg.setPasswd(ph.doHashing(reg.getPasswd()));
 		
-		
-		System.out.println(reg.getEmail());
-		System.out.println(reg.getUsernm());
+		System.out.println(reg);
+//		System.out.println(reg.getEmail());
+//		System.out.println(reg.getUsernm());
 		
 		Connection con;
 		CallableStatement cb;
