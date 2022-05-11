@@ -1,16 +1,22 @@
 package com.farmMarket.farmMarket.controller;
 
-import java.sql.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.DefaultBootstrapContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,11 +29,11 @@ import com.farmMarket.farmMarket.mybeans.Registration;
 @Controller
 public class TestController 
 {
-//	@Autowired
+
 //	HttpServletRequest request;
-//	@Autowired
+
 //	HttpServletResponse response;
-//	@Autowired
+
 //	HttpSession ses=request.getSession(true);
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
@@ -35,18 +41,21 @@ public class TestController
 		return "home";
 	}
 
-	@RequestMapping(path = "login", method = RequestMethod.GET)
+	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String loginPage() {
 		return "login";
 	}
 
-	@RequestMapping(path = "logincust", method = RequestMethod.POST)
+	@RequestMapping(path = "/logincust", method = RequestMethod.POST)
 	public String customer(@ModelAttribute Registration registration, Model model) {
 		String un = registration.getUsernm();
 		String pw = registration.getPasswd();
 		PasswordHashing ph = new PasswordHashing();
 		String unm = ph.doHashing(un);
 		String psw = ph.doHashing(pw);
+		
+		System.out.println(un+" "+unm);
+		System.out.println(pw+" "+psw);
 
 		Connection con;
 		PreparedStatement pst;
@@ -73,21 +82,56 @@ public class TestController
 		return check ? "home" : "failure";
 	}
 
-	@RequestMapping(value = "register", method = RequestMethod.GET)
+	@RequestMapping("/register")
 	public String register() {
 		return "registration";
 	}
+	
+	@RequestMapping("/showdata")
+	public String showdata() {
+		Connection con;
+		ResultSet rs;
+		Statement st=null;
+		
+		try 
+		{
+			con = DBConnector.getConnected();
+//			st = con.prepareStatement();
+			rs=st.executeQuery("select * from customers;");
+			while(rs.next())
+			{
+				System.out.println(rs.getNString("cust_name"));
+				System.out.println(rs);
+			}
+		}
+		catch(Exception e)
+		{
+			e.getStackTrace();
+		}
+		return "";
+	}
+	
 
-	@RequestMapping(value = "/registrationcu", method = RequestMethod.POST)
-	public String registration(@ModelAttribute Registration reg, Model model) {
-		System.out.println("MAnish");
+	@RequestMapping(path="/registrationcu",method=RequestMethod.POST)
+	public String registration(@ModelAttribute("reg") Registration reg, Model model) {
+		
 		String mob = String.valueOf(reg.getMobno());
 		String adh = String.valueOf(reg.getAadharid());
 		String userid = (mob.substring(0, 3)) + adh.substring(0, 3);
+		reg.setUserid(userid);
+		PasswordHashing ph = new PasswordHashing();
+		
+		reg.setUsernm(ph.doHashing(reg.getUsernm()));
+		reg.setPasswd(ph.doHashing(reg.getPasswd()));
+		
+//		reg.setUserid(userid);
+		System.out.println(reg);
+//		System.out.println(userid);
+//		System.out.println(reg.getUserid());
+//		System.out.println(reg.getUsernm());
+//		System.out.println(reg.getPasswd());
 		
 		
-		System.out.println(reg.getEmail());
-		System.out.println(reg.getUsernm());
 		
 		Connection con;
 		CallableStatement cb;
@@ -95,17 +139,21 @@ public class TestController
 
 		try {
 			con = DBConnector.getConnected();
-			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
-			cb.setString(1, userid);
-			cb.setString(2, reg.getPasswd());
-			cb.setString(3, reg.getUsernm());
+			
+		    cb=con.prepareCall("{call newcustomer(?,?,?,?,?,?,?,?,?)}");
+		//	System.out.println("MAnish");
+			cb.setString(1, reg.getUserid());
+			cb.setNString(2, reg.getPasswd());
+			cb.setNString(3, reg.getUsernm());
 			cb.setString(4, reg.getEmail());
 			cb.setString(5, reg.getGen());
-			cb.setInt(6, reg.getMobno());
+			cb.setString(6, reg.getMobno());
 			cb.setString(7, reg.getDob());
 			cb.setString(8, reg.getAadharid());
-			cb.setString(9, reg.getAddress());
-			cb.execute();
+			cb.setNString(9, reg.getAddress());
+			
+			rs=cb.executeQuery();
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -114,7 +162,7 @@ public class TestController
 		return "login";
 	}
 
-	@RequestMapping(path = "requestorder", method = RequestMethod.GET)
+	@RequestMapping(path = "/requestorder", method = RequestMethod.GET)
 	public String sendMessage(@ModelAttribute Order order) {
 		Connection con;
 		CallableStatement cb;
@@ -187,7 +235,7 @@ public class TestController
 		return "";
 	}
 	
-	@RequestMapping(path = "forgetpass", method = RequestMethod.GET)
+	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
 	public String callforgetpass() {
 		
 		
@@ -195,7 +243,7 @@ public class TestController
 	}
 	
 	
-	@RequestMapping(path = "updateprofile", method = RequestMethod.GET)
+	@RequestMapping(path = "/updateprofile", method = RequestMethod.GET)
 	public String updateProfile(@ModelAttribute Order order) {
 		
 		

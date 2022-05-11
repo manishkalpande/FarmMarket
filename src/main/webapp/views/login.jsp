@@ -25,12 +25,12 @@
       
         <div class="text-center mt-5"></div>
       
-        <form style="max-width:480px;margin:auto" action="logincust">
+        <form style="max-width:480px;margin:auto" action="logincust" method="post">
            
             <br>
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" class="form-control" />
+          <input type="text" id="form2Example1" class="form-control" />
           <label class="form-label" for="form2Example1">Email address</label>
         </div>
       
@@ -57,7 +57,7 @@
         </div>
       
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
       
         <!-- Register buttons -->
         <div class="text-center">
