@@ -43,8 +43,8 @@
         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market</a>
 
         <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
+            <input type="search" id="search-box" value="" placeholder="search here..." onchange="makeGetRequest()">
+            <label for="search-box" class="fas fa-search" "></label>
         </form>
 
     </div>
@@ -174,14 +174,7 @@
             </div>
             <img src="images/Photos/Apricot.jpg" alt="">
             <h3>Apricot</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -198,14 +191,7 @@
             </div>
             <img src="images/Photos/Arrowroot.jpg" alt="">
             <h3>Arrowroot</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -222,14 +208,7 @@
             </div>
             <img src="images/Photos/Avocado.jpg" alt="">
             <h3>Avocado</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -246,14 +225,7 @@
             </div>
             <img src="images/Photos/Banana.jpg" alt="">
             <h3>Banana</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -270,14 +242,7 @@
             </div>
             <img src="images/Photos/Beans.jpg" alt="">
             <h3>Beans</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -294,14 +259,7 @@
             </div>
             <img src="images/Photos/Beetroot -Chakundar.png" alt="">
             <h3>Beetroot -Chakundar</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -318,14 +276,7 @@
             </div>
             <img src="images/Photos/Bell Pepper -Capsicum.jpeg" alt="">
             <h3>BellPepper-Capsicum</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -342,14 +293,7 @@
             </div>
             <img src="images/Photos/Bitter Gourd- Karela.jpg" alt="">
             <h3>Bitter Gourd- Karela</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -366,14 +310,7 @@
             </div>
             <img src="images/Photos/Black Pepper.jpg" alt="">
             <h3>Black Pepper</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -390,14 +327,7 @@
             </div>
             <img src="images/Photos/Black-eye bean.webp" alt="">
             <h3>Black-eye bean</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -414,14 +344,7 @@
             </div>
             <img src="images/Photos/Bottle Gourd-Laukee.jpg" alt="">
             <h3>Bottle Gourd-Laukee</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -438,14 +361,7 @@
             </div>
             <img src="images/Photos/Brinjal.jpg" alt="">
             <h3>Brinjal</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -462,14 +378,7 @@
             </div>
             <img src="images/Photos/Broad bean.jpg" alt="">
             <h3>Broad bean</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -486,14 +395,7 @@
             </div>
             <img src="images/Photos/Broccoli.jpg" alt="">
             <h3>Broccoli</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -510,14 +412,7 @@
             </div>
             <img src="images/Photos/Cabbage Pattagobhi.jpg" alt="">
             <h3>Cabbage Pattagobhi</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -534,14 +429,7 @@
             </div>
             <img src="images/Photos/Carrot-Gajar.jpg" alt="">
             <h3>Carrot-Gajar</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -558,14 +446,7 @@
             </div>
             <img src="images/Photos/Cauliflower-Phool Gobhi.jpeg" alt="">
             <h3>Cauliflower</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -582,14 +463,7 @@
             </div>
             <img src="images/Photos/Cherry.jpg" alt="">
             <h3>Cherry</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -606,14 +480,7 @@
             </div>
             <img src="images/Photos/Coconut.jpeg" alt="">
             <h3>Coconut</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -630,14 +497,7 @@
             </div>
             <img src="images/Photos/Cucumber (Khira).jpg" alt="">
             <h3>Cucumber (Khira)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -654,14 +514,7 @@
             </div>
             <img src="images/Photos/Dairy & cheese or substitutes.jpeg" alt="">
             <h3>Dairy & cheese </h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -678,14 +531,7 @@
             </div>
             <img src="images/Photos/DRUMSTICK.jpg" alt="">
             <h3>DRUMSTICK</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -702,14 +548,7 @@
             </div>
             <img src="images/Photos/garlic.jpg" alt="">
             <h3>garlic</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -726,14 +565,7 @@
             </div>
             <img src="images/Photos/garlic2.jpeg" alt="">
             <h3>garlic2</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -750,14 +582,7 @@
             </div>
             <img src="images/Photos/Ginger.jpg" alt="">
             <h3>Ginger</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -774,14 +599,7 @@
             </div>
             <img src="images/Photos/Grain- wheat -Cereals.png" alt="">
             <h3>wheat</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -798,14 +616,7 @@
             </div>
             <img src="images/Photos/Grapes.png" alt="">
             <h3>Grapes</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -822,14 +633,7 @@
             </div>
             <img src="images/Photos/Grass Broom Raw Material.jpg" alt="">
             <h3>Grass Broom</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -846,14 +650,7 @@
             </div>
             <img src="images/Photos/Green chilli.jpeg" alt="">
             <h3>Green chilli</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -870,14 +667,7 @@
             </div>
             <img src="images/Photos/GREEN PAPAYA.jpg" alt="">
             <h3>GREEN PAPAYA</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -894,14 +684,7 @@
             </div>
             <img src="images/Photos/Guava.jfif" alt="">
             <h3>Guava</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -918,14 +701,7 @@
             </div>
             <img src="images/Photos/Kabuli Chana.jpg" alt="">
             <h3>Kabuli Chana</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -942,14 +718,7 @@
             </div>
             <img src="images/Photos/Kasoori Methi.jpg" alt="">
             <h3>Kasoori Methi</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -966,14 +735,7 @@
             </div>
             <img src="images/Photos/Kharbuja(Muskmelon).jpg" alt="">
             <h3>Kharbuja(Muskmelon)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -990,14 +752,7 @@
             </div>
             <img src="images/Photos/Kharbuja(Muskmelon)2.jpg" alt="">
             <h3>Kharbuja(Muskmelon)2</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1014,14 +769,7 @@
             </div>
             <img src="images/Photos/Kinnow(Kinnu).jpeg" alt="">
             <h3>Kinnow(Kinnu)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1038,14 +786,7 @@
             </div>
             <img src="images/Photos/kumato.jpg" alt="">
             <h3>kumato</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1062,14 +803,7 @@
             </div>
             <img src="images/Photos/Lemon.png" alt="">
             <h3>Lemon</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1086,14 +820,7 @@
             </div>
             <img src="images/Photos/LITCHE.jpg" alt="">
             <h3>LITCHE</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1109,14 +836,7 @@
             </div>
             <img src="images/Photos/Mango.jpeg" alt="">
             <h3>Mango</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1133,14 +853,7 @@
             </div>
             <img src="images/Photos/mausami.jpeg" alt="">
             <h3>mausami</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1157,14 +870,7 @@
             </div>
             <img src="images/Photos/Onions.png" alt="">
             <h3>Onions</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1181,14 +887,7 @@
             </div>
             <img src="images/Photos/Orange.jpg" alt="">
             <h3>Orange</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1205,14 +904,7 @@
             </div>
             <img src="images/Photos/peas.jpg" alt="">
             <h3>peas</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1229,14 +921,7 @@
             </div>
             <img src="images/Photos/Pineapple (ananas).jpg" alt="">
             <h3>Pineapple (ananas)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1253,14 +938,7 @@
             </div>
             <img src="images/Photos/POINTED GOURD.jpeg" alt="">
             <h3>POINTED GOURD</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1277,14 +955,7 @@
             </div>
             <img src="images/Photos/Pomogranates.jpg" alt="">
             <h3>Pomogranates</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1301,14 +972,7 @@
             </div>
             <img src="images/Photos/Potato.jpeg" alt="">
             <h3>Potato</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1325,14 +989,7 @@
             </div>
             <img src="images/Photos/pumpkin.jpeg" alt="">
             <h3>pumpkin</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1349,14 +1006,7 @@
             </div>
             <img src="images/Photos/Raw Peanuts.jpg" alt="">
             <h3>Raw Peanuts</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1373,14 +1023,7 @@
             </div>
             <img src="images/Photos/reetha.jpg" alt="">
             <h3>reetha</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1397,14 +1040,7 @@
             </div>
             <img src="images/Photos/Seeds.jpg" alt="">
             <h3>Seeds</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1421,14 +1057,7 @@
             </div>
             <img src="images/Photos/Soyabean.jpg" alt="">
             <h3>Soyabean</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1445,14 +1074,7 @@
             </div>
             <img src="images/Photos/Spray Dried Coffee.jpg" alt="">
             <h3>Spray Dried Coffee</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1469,14 +1091,7 @@
             </div>
             <img src="images/Photos/Strawberries.jpg" alt="">
             <h3>Strawberries</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1493,14 +1108,7 @@
             </div>
             <img src="images/Photos/Strawberry.jpg" alt="">
             <h3>Strawberry</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1517,14 +1125,7 @@
             </div>
             <img src="images/Photos/Sweet potato.jpeg" alt="">
             <h3>Sweet potato</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1541,14 +1142,7 @@
             </div>
             <img src="images/Photos/Tamarind (imli).png" alt="">
             <h3>Tamarind (imli)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1565,14 +1159,7 @@
             </div>
             <img src="images/Photos/Tomato.jpeg" alt="">
             <h3>Tomato</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1589,14 +1176,7 @@
             </div>
             <img src="images/Photos/Turmeric (Haldi).jpg" alt="">
             <h3>Turmeric (Haldi)</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1613,14 +1193,7 @@
             </div>
             <img src="images/Photos/urad Dal.jpg" alt="">
             <h3>urad Dal</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1637,14 +1210,7 @@
             </div>
             <img src="images/Photos/VEG JACK FRUIT.jpg" alt="">
             <h3>VEG JACK FRUIT</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1661,14 +1227,7 @@
             </div>
             <img src="images/Photos/watermelon.jpg" alt="">
             <h3>watermelon</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1685,14 +1244,7 @@
             </div>
             <img src="images/Photos/Winter Melon – पेठा [ Petha.jpg" alt="">
             <h3>Winter Melon- पेठा </h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1709,14 +1261,7 @@
             </div>
             <img src="images/Photos/Zucchini.jpg" alt="">
             <h3>Zucchini</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1733,14 +1278,7 @@
             </div>
             <img src="images/Photos/Apricot.jpg" alt="">
             <h3>Apricot</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1757,14 +1295,7 @@
             </div>
             <img src="images/product-1.png" alt="">
             <h3>organic banana</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1781,14 +1312,7 @@
             </div>
             <img src="images/Photos/Apple.jpg" alt="">
             <h3>Apple</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1805,14 +1329,7 @@
             </div>
             <img src="images/product-2.png" alt="">
             <h3>organic tomato</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1829,14 +1346,7 @@
             </div>
             <img src="images/product-3.png" alt="">
             <h3>organic orange</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1853,14 +1363,7 @@
             </div>
             <img src="images/product-4.png" alt="">
             <h3>natural mild</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1877,14 +1380,7 @@
             </div>
             <img src="images/product-5.png" alt="">
             <h3>organic grapes</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1901,14 +1397,7 @@
             </div>
             <img src="images/product-6.png" alt="">
             <h3>natural almonts</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1925,14 +1414,7 @@
             </div>
             <img src="images/product-7.png" alt="">
             <h3>organic apple</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1949,14 +1431,7 @@
             </div>
             <img src="images/product-8.png" alt="">
             <h3>natural butter</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">
@@ -1973,14 +1448,7 @@
             </div>
             <img src="images/product-9.png" alt="">
             <h3>organic carrot</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> RS. 10.50 <span> RS. 13.20 </span> </div>
+          
             <div class="quantity">
                 <span>quantity : </span>
                 <input type="number" min="1" max="1000" value="1">

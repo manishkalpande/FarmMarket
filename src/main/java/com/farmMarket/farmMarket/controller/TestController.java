@@ -23,24 +23,20 @@ import com.farmMarket.farmMarket.mybeans.Registration;
 @Controller
 public class TestController 
 {
-//	@Autowired
-//	HttpServletRequest request;
-//	@Autowired
-//	HttpServletResponse response;
-//	@Autowired
-//	HttpSession ses=request.getSession(true);
+
+	//HttpSession ses=request.getSession(true);
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String firstLine() {
 		return "home";
 	}
 
-	@RequestMapping(path = "login", method = RequestMethod.GET)
+	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String loginPage() {
 		return "login";
 	}
 
-	@RequestMapping(path = "logincust", method = RequestMethod.POST)
+	@RequestMapping(path = "/logincust", method = RequestMethod.POST)
 	public String customer(@ModelAttribute("reg") Registration reg, Model model) {
 		String un = reg.getUsernm();
 		String pw = reg.getPasswd();
@@ -105,7 +101,9 @@ public class TestController
 		ResultSet rs;
 
 		try {
-			con = DBConnector.getConnected();
+//			DBConnector db= (DBConnector) DBConnector.getConnected();
+			
+			con =DBConnector.getConnected();
 			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
 			cb.setString(1, userid);
 			cb.setString(2, reg.getPasswd());
@@ -125,7 +123,7 @@ public class TestController
 		return "login";
 	}
 
-	@RequestMapping(path = "requestorder", method = RequestMethod.GET)
+	@RequestMapping(path = "/requestorder", method = RequestMethod.GET)
 	public String sendMessage(@ModelAttribute Order order) {
 		Connection con;
 		CallableStatement cb;
@@ -198,7 +196,7 @@ public class TestController
 		return "";
 	}
 	
-	@RequestMapping(path = "forgetpass", method = RequestMethod.GET)
+	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
 	public String callforgetpass() {
 		
 		
@@ -206,12 +204,9 @@ public class TestController
 	}
 	
 	
-	@RequestMapping(path = "updateprofile", method = RequestMethod.GET)
+	@RequestMapping(path = "/updateprofile", method = RequestMethod.GET)
 	public String updateProfile(@ModelAttribute Order order) {
-		
-		
 		return "";
 	}
-	
 
 }

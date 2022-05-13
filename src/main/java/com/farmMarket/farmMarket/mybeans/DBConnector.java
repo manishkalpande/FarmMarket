@@ -6,42 +6,44 @@ import java.sql.DriverManager;
 public class DBConnector {
 	
 	
-	public static Connection getConnected()
-	{
-		Connection con=null;
-				
-		try
-		{
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=Manish12");
-			
-		}
-		catch(Exception e)
-		{
-			
-		}
-		return con;
-	}
-	
-//	private static Connection dbconnection;
-//	
-//	private DBConnector()
+//	public static Connection getConnected()
 //	{
+//		Connection con=null;
+//				
 //		try
 //		{
 //			Class.forName("com.mysql.cj.jdbc.Driver");
-//			dbconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=Manish12");	
+//			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=Manish12");
+//			
 //		}
 //		catch(Exception e)
 //		{
-//			System.out.println(e);			
+//			
 //		}
+//		return con;
 //	}
-//	
-//	public static Connection getConnected()
-//	{
-//		return dbconnection;
-//	}
+	
+	private static Connection dbconnection;
+	
+	private DBConnector()
+	{
+		
+	}
+
+	public static Connection getConnected()
+	{
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			dbconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=Manish12");	
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);			
+		}
+		
+		return dbconnection;
+	}
 
 
 }

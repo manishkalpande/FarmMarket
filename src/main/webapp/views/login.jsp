@@ -30,11 +30,7 @@
             <br>
         <!-- Email input -->
         <div class="form-outline mb-4">
-
-          <input type="text" id="form2Example1" class="form-control" />
-
           <input type="text" id="usernm" name="usernm" class="form-control" />
-
           <label class="form-label" for="form2Example1">Email address</label>
         </div>
       
