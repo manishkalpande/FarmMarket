@@ -73,7 +73,7 @@ public class TestController
 			System.out.println(e.getStackTrace());
 		}
 
-		return check ? "home" : "failure";
+		return check ? "home1" : "failure";
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
