@@ -53,7 +53,10 @@
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
       
+                      <form class="mx-1 mx-md-4" action="/registrationcu" onsubmit="return checkPassword()" method="post">
+
                       <form class="mx-1 mx-md-4" action="registrationcu" onsubmit="return checkPassword()" method="post">
+
       
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -97,7 +100,7 @@
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="date" class="form-control" id="dob" name="dob"/>
+                                <input type="date"  id="dob" name="dob"/>
                               <label for="exampleDatepicker1" class="form-label">Select a date</label>
                             </div>
                           </div>

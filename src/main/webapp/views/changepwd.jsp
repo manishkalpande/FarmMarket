@@ -8,15 +8,32 @@
 
     <title>Change password</title>
   </head>
-   <script>  
-    function matchPassword() {  
-      var pw1 = document.getElementById("pass");  
-      var pw2 = document.getElementById("pass1");  
-      if(pw1 != pw2)  
-      {   
-        alert("Passwords did not match");  
-      } 
-    }  
+  <script>  
+ function checkPassword(form) {
+     password1 = form.newpass.value;
+     password2 = form.pass1.value;
+     console.log(password1);
+     console.log(password2);
+     // If password not entered
+     if (password1 == '')
+         alert ("Please enter Password");
+           
+     // If confirm password not entered
+     else if (password2 == '')
+         alert ("Please enter confirm password");
+           
+     // If Not same return False.    
+     else if (password1 != password2) {
+         alert ("\nPassword did not match: Please try again...")
+         return false;
+     }
+
+     // If same return True.
+     else{
+         alert("Password Match: Welcome to GeeksforGeeks!")
+         return true;
+     }
+ }
     </script>  
 <body>
 
@@ -33,23 +50,23 @@
       
         <div class="text-center mt-5"></div>
       
-        <form style="max-width:480px;margin:auto; height: 500px;" action="logincust">
+        <form style="max-width:480px;margin:auto; height: 500px;" onsubmit="return checkPassword()" method="post" action="changepassword">
            
             <br>
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="password" id="form2Example1" class="form-control" />
+          <input type="password" id="passwd" name="passwd" class="form-control" />
           <label class="form-label" for="form2Example1">Current password</label>
         </div>
       
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="pass" class="form-control" />
+          <input type="password" id="newpass" name="newpass" class="form-control" />
           <label class="form-label" for="pass1">New password</label>
         </div>
 
         <div class="form-outline mb-4">
-            <input type="password" id="form2Example2" class="form-control" />
+            <input type="password" id="pass1" name="pass1" class="form-control" />
             <label class="form-label" for="form2Example2">Comfirm New password</label>
           </div>
       
@@ -62,9 +79,9 @@
           
             <div class="form-outline mb-4">
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4" onclick="matchPassword()">Update Password</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4" >Update Password</button>
         <button type="button" class="btn btn-primary btn-block mb-4" style="background-color: rgb(220, 215, 215); border-color: rgb(93, 90, 90); color:black">Cancel</button>
-        <p class="small fw-bold mt-2 pt-1 mb-0" style="padding-left: 2.5rem; padding-right: 2.5rem;"><a href="#!" class="text-body">Forgot password?</a></p>
+        <p class="small fw-bold mt-2 pt-1 mb-0" style="padding-left: 2.5rem; padding-right: 2.5rem;"><a href="forgetpass" class="text-body">Forgot password?</a></p>
             </div>
         <br/>
             <div class="d-flex justify-content-between align-items-center">

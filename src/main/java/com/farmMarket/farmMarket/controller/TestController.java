@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.farmMarket.farmMarket.mybeans.ChangePassword;
 import com.farmMarket.farmMarket.mybeans.DBConnector;
 import com.farmMarket.farmMarket.mybeans.Order;
 import com.farmMarket.farmMarket.mybeans.PasswordHashing;
@@ -23,24 +24,20 @@ import com.farmMarket.farmMarket.mybeans.Registration;
 @Controller
 public class TestController 
 {
-//	@Autowired
-//	HttpServletRequest request;
-//	@Autowired
-//	HttpServletResponse response;
-//	@Autowired
-//	HttpSession ses=request.getSession(true);
+
+	//HttpSession ses=request.getSession(true);
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String firstLine() {
 		return "home";
 	}
 
-	@RequestMapping(path = "login", method = RequestMethod.GET)
+	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String loginPage() {
 		return "login";
 	}
 
-	@RequestMapping(path = "logincust", method = RequestMethod.POST)
+	@RequestMapping(path = "/logincust", method = RequestMethod.POST)
 	public String customer(@ModelAttribute("reg") Registration reg, Model model) {
 		String un = reg.getUsernm();
 		String pw = reg.getPasswd();
@@ -105,14 +102,16 @@ public class TestController
 		ResultSet rs;
 
 		try {
-			con = DBConnector.getConnected();
+//			DBConnector db= (DBConnector) DBConnector.getConnected();
+			
+			con =DBConnector.getConnected();
 			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
 			cb.setString(1, userid);
 			cb.setString(2, reg.getPasswd());
 			cb.setString(3, reg.getUsernm());
 			cb.setString(4, reg.getEmail());
 			cb.setString(5, reg.getGen());
-			cb.setInt(6, reg.getMobno());
+			cb.setString(6, reg.getMobno());
 			cb.setString(7, reg.getDob());
 			cb.setString(8, reg.getAadharid());
 			cb.setString(9, reg.getAddress());
@@ -125,7 +124,7 @@ public class TestController
 		return "login";
 	}
 
-	@RequestMapping(path = "requestorder", method = RequestMethod.GET)
+	@RequestMapping(path = "/requestorder", method = RequestMethod.GET)
 	public String sendMessage(@ModelAttribute Order order) {
 		Connection con;
 		CallableStatement cb;
@@ -198,7 +197,7 @@ public class TestController
 		return "";
 	}
 	
-	@RequestMapping(path = "forgetpass", method = RequestMethod.GET)
+	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
 	public String callforgetpass() {
 		
 		
@@ -206,11 +205,59 @@ public class TestController
 	}
 	
 	
-	@RequestMapping(path = "updateprofile", method = RequestMethod.GET)
-	public String updateProfile(@ModelAttribute Order order) {
+	@RequestMapping(path = "/changepass", method = RequestMethod.GET)
+	public String changePass() {
+		return "changepwd";
+	}
+	
+	@RequestMapping(path = "/changepassword", method = RequestMethod.POST)
+	public String changePassword(@ModelAttribute ChangePassword cp) {
+		Connection con;
+		PreparedStatement pst;
+		ResultSet rs;
+		PasswordHashing ph= new PasswordHashing();
+		cp.setPasswd(ph.doHashing(cp.getPasswd()));
+		cp.setNewpass(ph.doHashing(cp.getNewpass()));
+		System.out.println(cp.getNewpass()+" "+cp.getPasswd());
+		try {
+			System.out.println("try cha andar");
+			con =DBConnector.getConnected();
+			pst = con.prepareStatement("select cust_pass from customers where cust_id=431232");
+			
+//			pst.setString(1,"431232");
+			rs = pst.executeQuery();
+			System.out.println("query execute jhali");
+			if(rs.next()) {
+				System.out.println("rs cha andar aalo re");
+			if(cp.getPasswd().equals(rs.getNString("cust_pass"))) {
+				System.out.println("old pass check jhala");
+					
+				pst =con.prepareStatement("update customers set cust_pass=? where cust_id=?");
+				pst.setNString(1, cp.getNewpass());
+				pst.setNString(2, "431232");
+				int x = pst.executeUpdate();
+				System.out.println("pass change chi query jhalai");
+				if(x>0) {
+					System.out.println("password changed successfully");
+					return "home1";
+				}else {
+					System.out.println("password not updated");
+					return "changepass";
+				}
+				
+			}else {
+				System.out.println("old password not enterd correctly");
+				return "changepass";
+			}
+			}else {
+				System.out.println("kahi kr res null aahe");
+			}
+			
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
 		
-		
-		return "";
+		return "changepwd";
 	}
 	
 

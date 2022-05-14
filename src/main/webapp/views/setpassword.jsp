@@ -32,7 +32,7 @@
       
         <div class="text-center mt-5"></div>
       
-        <form style="max-width:480px;margin:auto; height: 500px;" action="logincust">
+        <form style="max-width:480px;margin:auto; height: 500px;" action="logincust" method="post">
            
             <br>
         <!-- Email input -->

@@ -1,12 +1,17 @@
 package com.farmMarket.farmMarket.mybeans;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Registration {
 	private String userid;
 	private String passwd;
 	private String usernm;
 	private String email;
 	private String gen;
-	private int mobno;
+	private String mobno;
+	//@DateTimeFormat(pattern ="yyyy-MM-dd")
 	private String dob;	
 	private String aadharid;
 	private String address;
@@ -19,7 +24,7 @@ public class Registration {
 		passwd="";
 		email="";
 		gen="";
-		mobno=0;
+		mobno="";
 		dob="";
 		aadharid="";
 		address="";
@@ -37,11 +42,6 @@ public class Registration {
 	}
 
 	public void setUserid(String userid) {
-		String mob=String.valueOf(getMobno());
-		String adh=String.valueOf(getAadharid());
-		String mix=(mob.substring(0, 3))+adh.substring(0,3);
-		userid+=mix;
-		
 		this.userid = userid;
 	}
 
@@ -73,11 +73,14 @@ public class Registration {
 		this.gen = gen;
 	}
 
-	public int getMobno() {
+
+
+	public String getMobno() {
 		return mobno;
 	}
 
-	public void setMobno(int mobno) {
+
+	public void setMobno(String mobno) {
 		this.mobno = mobno;
 	}
 
@@ -85,9 +88,11 @@ public class Registration {
 		return dob;
 	}
 
+
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
+
 
 	public String getAadharid() {
 		return aadharid;
@@ -103,6 +108,14 @@ public class Registration {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Registration [userid=" + userid + ", passwd=" + passwd + ", usernm=" + usernm + ", email=" + email
+				+ ", gen=" + gen + ", mobno=" + mobno + ", dob=" + dob + ", aadharid=" + aadharid + ", address="
+				+ address + "]";
 	}
 
 	
