@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.farmMarket.farmMarket.mybeans.ChangePassword;
 import com.farmMarket.farmMarket.mybeans.DBConnector;
 import com.farmMarket.farmMarket.mybeans.Order;
 import com.farmMarket.farmMarket.mybeans.PasswordHashing;
@@ -204,9 +205,60 @@ public class TestController
 	}
 	
 	
-	@RequestMapping(path = "/updateprofile", method = RequestMethod.GET)
-	public String updateProfile(@ModelAttribute Order order) {
-		return "";
+	@RequestMapping(path = "/changepass", method = RequestMethod.GET)
+	public String changePass() {
+		return "changepwd";
 	}
+	
+	@RequestMapping(path = "/changepassword", method = RequestMethod.POST)
+	public String changePassword(@ModelAttribute ChangePassword cp) {
+		Connection con;
+		PreparedStatement pst;
+		ResultSet rs;
+		PasswordHashing ph= new PasswordHashing();
+		cp.setPasswd(ph.doHashing(cp.getPasswd()));
+		cp.setNewpass(ph.doHashing(cp.getNewpass()));
+		System.out.println(cp.getNewpass()+" "+cp.getPasswd());
+		try {
+			System.out.println("try cha andar");
+			con =DBConnector.getConnected();
+			pst = con.prepareStatement("select cust_pass from customers where cust_id=431232");
+			
+//			pst.setString(1,"431232");
+			rs = pst.executeQuery();
+			System.out.println("query execute jhali");
+			if(rs.next()) {
+				System.out.println("rs cha andar aalo re");
+			if(cp.getPasswd().equals(rs.getNString("cust_pass"))) {
+				System.out.println("old pass check jhala");
+					
+				pst =con.prepareStatement("update customers set cust_pass=? where cust_id=?");
+				pst.setNString(1, cp.getNewpass());
+				pst.setNString(2, "431232");
+				int x = pst.executeUpdate();
+				System.out.println("pass change chi query jhalai");
+				if(x>0) {
+					System.out.println("password changed successfully");
+					return "home1";
+				}else {
+					System.out.println("password not updated");
+					return "changepass";
+				}
+				
+			}else {
+				System.out.println("old password not enterd correctly");
+				return "changepass";
+			}
+			}else {
+				System.out.println("kahi kr res null aahe");
+			}
+			
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		return "changepwd";
+	}
+	
 
 }

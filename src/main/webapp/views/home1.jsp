@@ -36,10 +36,10 @@
 
     <div class="header-1">
 
-        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market 2</a>
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
 
         <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="search here...">
+            <input type="search" id="search-box" placeholder="search here..." onchange="makeGetRequest()">
             <label for="search-box" class="fas fa-search"></label>
         </form>
 
@@ -65,6 +65,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">My Account</a>
                     <a class="dropdown-item" href="#">My Orders</a>
+                     <a class="dropdown-item" href="changepass">Change Password</a>
                     <a class="dropdown-item" href="#">Logout</a>
                 </div>
                 
