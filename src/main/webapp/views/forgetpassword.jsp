@@ -35,6 +35,8 @@ function ajax() {
   // (C) PREVENT HTML FORM SUBMIT
   return false;
 }
+
+
 </script>
 
 <body>
@@ -62,7 +64,7 @@ function ajax() {
         </div>
         <button type="submit" class="btn btn-primary btn-block mb-4" onclick= "myFunction()">Generate OTP</button>
       </form>
-      <form method="post" name="form" id="form" action="verifymail">
+      <form  name="form" id="form" >
         <!-- Password input -->
         <div class="form-outline mb-4">
           <input type="number" id="otp" name="otp" class="form-control"/>
