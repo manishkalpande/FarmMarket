@@ -25,8 +25,10 @@ import com.farmMarket.farmMarket.mybeans.Registration;
 @Controller
 public class TestController {
 
-	// HttpSession ses=request.getSession(true);
-
+	HttpServletRequest request;
+	HttpServletResponse response;
+	
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String firstLine() {
 		return "home";
@@ -47,7 +49,7 @@ public class TestController {
 	}
 	
 	@RequestMapping(path = "/logincust", method = RequestMethod.POST)
-	public String customer(@ModelAttribute("reg") Registration reg, Model model) {
+	public String customer(@ModelAttribute("reg") Registration reg, Model model,HttpSession session) {
 		String un = reg.getUsernm();
 		String pw = reg.getPasswd();
 		PasswordHashing ph = new PasswordHashing();
@@ -71,7 +73,9 @@ public class TestController {
 			System.out.println("try cha andart");
 
 			if (rs.next()) {
-				// ses.setAttribute("userid", rs.getNString(0));
+				session.setAttribute("userid", rs.getString("cust_id"));
+				session.setAttribute("usrtype", "customers");
+								System.out.println(session.getId());
 				System.out.println("bundi");
 				check = true;
 			} else {
@@ -87,7 +91,7 @@ public class TestController {
 	}
 	
 	@RequestMapping(path = "/loginseller", method = RequestMethod.POST)
-	public String seller(@ModelAttribute("reg") Registration reg, Model model) {
+	public String seller(@ModelAttribute("reg") Registration reg, Model model,HttpSession session) {
 		String un = reg.getUsernm();
 		String pw = reg.getPasswd();
 		PasswordHashing ph = new PasswordHashing();
@@ -112,6 +116,9 @@ public class TestController {
 
 			if (rs.next()) {
 				// ses.setAttribute("userid", rs.getNString(0));
+				session.setAttribute("userid", rs.getString("seller_id"));
+				session.setAttribute("usrtype", rs.getString("sellers"));
+				
 				System.out.println("bundi");
 				check = true;
 			} else {
@@ -287,7 +294,7 @@ public class TestController {
 	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
 	public String callforgetpass(@ModelAttribute ChangePassword cp) {
 		String x = cp.getUsrtype();
-		return "enteremail";
+		return "forgetpassword";
 	}
 	
 	

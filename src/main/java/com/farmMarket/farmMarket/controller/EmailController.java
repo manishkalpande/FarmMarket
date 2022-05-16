@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,13 +32,21 @@ public class EmailController {
    }
    
    @RequestMapping(value = "/verifymail")
-   public String otpcheck(@RequestParam("otp") int c)
+   public String otpcheck(@RequestParam("otp") int c,HttpSession session)
    {
+	   System.out.println(session.getId());
+	   String ty=(String) session.getAttribute("usrtype");
+	   System.out.println(ty);
 	   if(otp==c)
-		   return "";
+	   {
+		   if(ty.equals("customers"))
+			   return "login";
+		   else
+			   return "loginseller";
+	   }
 	   
 	   
-	   return "";
+	   return "forgetpassword";
    }
    
    

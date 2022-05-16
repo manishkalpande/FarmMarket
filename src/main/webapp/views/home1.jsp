@@ -38,7 +38,7 @@
     <div class="header-1">
 
         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
-
+		<%=session.getId()%>
         <form action="searchprod" class="search-box-container" method="post">
             <input type="search" id="search-box" name="search-box" placeholder="search here..." >
             <label for="search-box" class="fas fa-search" ></label>

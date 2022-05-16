@@ -9,8 +9,31 @@
     <title>Forget Password</title>
 </head>
 <script>
-function myFunction() {
-  document.getElementById("frm").submit();
+function ajax() {
+  // (A) GET FORM DATA
+  var form = document.getElementById("frm");
+  var data = new FormData(form);
+ 	
+  data.append("email",document.getElementById("email").value);
+  // (B) AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "sendemail");
+  // What to do when server responds
+  xhr.onload = function (){ 
+	  console.log(this.response); 
+	if(this.response=="Ok")
+		{
+		alert("Send Otp");
+		}
+	else
+		{
+		alert("error");
+		}
+  };
+  xhr.send(data);
+ 
+  // (C) PREVENT HTML FORM SUBMIT
+  return false;
 }
 </script>
 
@@ -29,7 +52,7 @@ function myFunction() {
       
         <div class="text-center mt-5"></div>
       <% String x = request.getParameter("type"); %>
-        <form style="max-width:480px;margin:auto" name="frm" method="post" id="frm" action="sendemail">
+        <form style="max-width:480px;margin:auto" name="frm" id="frm" onsubmit="return ajax()">
            <input type="hidden" value="<%=x%>"/>
             <br>
         <!-- Email input -->
@@ -37,11 +60,12 @@ function myFunction() {
           <input type="email" id="email" name="email" class="form-control" />
           <label class="form-label" for="form2Example1">Email ID</label>
         </div>
-        <button type="button" class="btn btn-primary btn-block mb-4" onclick= "myFunction()">Generate OTP</button>
-      
+        <button type="submit" class="btn btn-primary btn-block mb-4" onclick= "myFunction()">Generate OTP</button>
+      </form>
+      <form method="post" name="form" id="form" action="verifymail">
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="number" id="otp" class="form-control"/>
+          <input type="number" id="otp" name="otp" class="form-control"/>
           <label class="form-label" for="form2Example2">4 digit OTP</label>
         </div>
       
