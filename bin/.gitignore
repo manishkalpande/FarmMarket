@@ -1,1 +1,6 @@
 /target/
+/bin/
+src/main/java/com/farmMarket/farmMarket/mybeans/SendMail.java
+src/main/java/com/farmMarket/farmMarket/mybeans/DBConnector.java
+pom.xml
+.gitignore

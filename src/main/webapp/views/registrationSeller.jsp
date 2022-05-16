@@ -61,7 +61,7 @@
 										up</p>
 
 
-										<form class="mx-1 mx-md-4" action="registrationcu"
+										<form class="mx-1 mx-md-4" action="regseller"
 											onsubmit="return checkPassword()" method="post">
 
 

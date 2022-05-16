@@ -65,8 +65,16 @@
     
                 <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">My Account</a>
+                    <a class="dropdown-item" href="myacc">My Account</a>
                     <a class="dropdown-item" href="#">My Show All s</a>
+                    <%
+                    String x =(String)session.getAttribute("usrtype");
+            		if(x.equals("sellers")){
+            			%><a class="dropdown-item" href="addProduct">Add Products</a>
+            			<a class="dropdown-item" href="showProduct">Show Products</a>
+            			<%
+            		}
+                    %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
                     <a class="dropdown-item" href="#">Logout</a>
                 </div>
@@ -1003,7 +1011,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a  href="showseller?value=Tomato" class="btn">Show All </a>
         </div>
 
         <div class="box">

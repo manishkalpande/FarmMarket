@@ -1,6 +1,7 @@
 package com.farmMarket.farmMarket.controller;
 
 import java.sql.*;
+import java.util.Collection;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.farmMarket.farmMarket.mybeans.AddProduct;
 import com.farmMarket.farmMarket.mybeans.ChangePassword;
 import com.farmMarket.farmMarket.mybeans.DBConnector;
 import com.farmMarket.farmMarket.mybeans.Order;
@@ -33,12 +35,79 @@ public class TestController {
 	public String firstLine() {
 		return "home";
 	}
+	
+	@RequestMapping(value = "/abc", method = RequestMethod.GET)
+	public String abc() {
+		return "abc";
+	}
+	
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String loginPage() {
 		return "selectUsrType";
 	}
 	
+	@RequestMapping(value = "/myacc", method = RequestMethod.GET)
+	public String myAcc(@ModelAttribute Registration reg, Model model,HttpSession session) {
+//		PasswordHashing ph = new PasswordHashing();
+//		model.addAttribute("usernm",ph.doHashing((String) model.getAttribute("usernm")));
+		String x = (String) session.getAttribute("usrtype");
+		String id = (String) session.getAttribute("userid");
+		System.out.println(x);
+		
+		Connection con;
+		PreparedStatement pst;
+		ResultSet rs;
+		boolean check = false;
+
+		try {
+			if(x.equals("customer")) {
+				
+			con = DBConnector.getConnected();
+			pst = con.prepareStatement("select * from customers where cust_id=?;");
+			pst.setString(1, id);	
+			rs = pst.executeQuery();
+			System.out.println("try cha andart "+rs);
+
+			if (rs.next()) {
+				System.out.println("if cha andar");
+				reg.setUsernm(rs.getString("cust_name"));
+				reg.setEmail(rs.getString("cust_email"));
+				reg.setGen(rs.getString("cust_gen"));
+				reg.setMobno(rs.getString("cust_mob"));
+				reg.setAadharid(rs.getString("cust_addhar_vid"));
+				reg.setAddress(rs.getString("cust_address"));
+				model.addAllAttributes((Collection<Registration>) reg);
+				System.out.println(reg);
+			}
+			}else {
+	
+				String uid = (String) session.getAttribute("userid");
+				System.out.println(uid);
+				con = DBConnector.getConnected();
+				pst = con.prepareStatement("select * from sellers where seller_id=?;");
+				pst.setString(1, uid);
+				
+				rs = pst.executeQuery();
+				System.out.println("try cha andart");
+
+				if (rs.next()) {
+					reg.setUsernm(rs.getString("seller_name"));
+					reg.setEmail(rs.getString("seller_email"));
+					reg.setGen(rs.getString("seller_gen"));
+					reg.setMobno(rs.getString("seller_mob"));
+					reg.setAadharid(rs.getString("seller_addhar_vid"));
+					reg.setAddress(rs.getString("seller_address"));
+					model.addAllAttributes((Collection<Registration>) reg);
+					
+				}
+			}
+			
+		}catch(Exception ex) {
+			ex.getStackTrace();
+		}
+		return "updateprofile";
+	}
 	@RequestMapping(path = "/usrtype", method = RequestMethod.POST)
 	public String userType(@RequestParam("test") String x) {
 		if(x.equals("customer")) {
@@ -117,7 +186,7 @@ public class TestController {
 			if (rs.next()) {
 				// ses.setAttribute("userid", rs.getNString(0));
 				session.setAttribute("userid", rs.getString("seller_id"));
-				session.setAttribute("usrtype", rs.getString("sellers"));
+				session.setAttribute("usrtype", "sellers");
 				
 				System.out.println("bundi");
 				check = true;
@@ -180,7 +249,12 @@ public class TestController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/registrationseller", method = RequestMethod.POST)
+	@RequestMapping(path = "/registerSeller", method = RequestMethod.GET)
+	public String registerSeller() {
+		return "registrationSeller";
+	}
+	
+	@RequestMapping(value = "/regseller", method = RequestMethod.POST)
 	public String registrationSeller(@ModelAttribute("reg") Registration reg, Model model) {
 
 		String mob = String.valueOf(reg.getMobno());
@@ -203,7 +277,7 @@ public class TestController {
 //			DBConnector db= (DBConnector) DBConnector.getConnected();
 
 			con = DBConnector.getConnected();
-			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
+			cb = con.prepareCall("call newseller(?,?,?,?,?,?,?,?,?)");
 			cb.setString(1, userid);
 			cb.setString(2, reg.getPasswd());
 			cb.setString(3, reg.getUsernm());
@@ -219,7 +293,7 @@ public class TestController {
 			e.printStackTrace();
 		}
 
-		return "login";
+		return "loginSeller";
 	}
 
 	@RequestMapping(path = "/requestorder", method = RequestMethod.GET)
@@ -376,5 +450,77 @@ public class TestController {
 	public String showseller() {
 		return "showsellers";
 	}
+	
+	@RequestMapping(path = "/addProduct", method = RequestMethod.GET)
+	public String addProduct() {
+		return "addproduct";
+	}
+	
+	@RequestMapping(path = "/showProduct", method = RequestMethod.GET)
+	public String showProduct() {
+		return "showmyproduct";
+	}
+	@RequestMapping(path = "/appendproduct", method = RequestMethod.POST)
+	public String appendProd(@ModelAttribute AddProduct ap,HttpSession session) {
+		System.out.println("mehtod called");
+		Connection con;
+		CallableStatement cb;
+		ResultSet rs;
+		String x = (String)session.getAttribute("userid");
+		System.out.println(x);
+		ap.setSeller_id(x);
+		System.out.println(ap.getProd_id());
+		try {
+//			DBConnector db= (DBConnector) DBConnector.getConnected();
+			System.out.println("inside try");
+			con = DBConnector.getConnected();
+			cb = con.prepareCall("call addproduct(?,?,?,?,?,?,?)");
+			cb.setString(1, ap.getProd_id());
+			cb.setString(2, ap.getSeller_id());
+			cb.setString(3, ap.getProd_title());
+			cb.setString(4, ap.getProd_desc());
+			cb.setString(5, ap.getProd_quantity());
+			cb.setString(6, ap.getProd_quantity_type());
+			cb.setInt(7, ap.getProd_price());
+			cb.execute();
+			System.out.println("mehtod executed");
+		} catch (Exception e) {
+			System.out.println("inside catch");
+			e.printStackTrace();
+		}
+
+		return "showmyproduct";
+	}
+	@RequestMapping(path = "/deletemyprod", method = RequestMethod.POST)
+	public String deletemyprod(@ModelAttribute AddProduct ap,HttpSession session) {
+		Connection con;
+		PreparedStatement pst;
+		
+		System.out.println(ap.getProd_id());
+		System.out.println(ap.getSeller_id());
+		try {
+			System.out.println("try cha andar");
+			con = DBConnector.getConnected();
+			pst = con.prepareStatement("delete from products1 where prod_id=? and seller_id=?");
+			pst.setString(1, ap.getProd_id());
+			pst.setString(2, ap.getSeller_id());
+			
+			int r=pst.executeUpdate();
+			System.out.println("query execute jhali");
+			if (r>0) {
+				
+				System.out.println("iside rs");
+			}
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		
+		
+		
+		return "";
+	}
+	
 
 }

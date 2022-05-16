@@ -8,6 +8,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+  <link href="css/sendmessage.css" rel="stylesheet">
+  <script defer src="js/sendmessage.js"></script>
 <title>Show Product of Sellers</title>
 
     <!-- font awesome cdn link  -->
@@ -34,13 +36,12 @@
     </style>
 </head>
 <body>
-
 <header>
 <div id="man"></div>
     <div class="header-1">
 
         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
-
+		<%=session.getId()%>
         <form action="searchprod" class="search-box-container" method="post">
             <input type="search" id="search-box" name="search-box" placeholder="search here..." >
             <label for="search-box" class="fas fa-search" ></label>
@@ -67,8 +68,16 @@
     
                 <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">My Account</a>
+                    <a class="dropdown-item" href="myacc">My Account</a>
                     <a class="dropdown-item" href="#">My Show All s</a>
+                    <%
+                    String x =(String)session.getAttribute("usrtype");
+            		if(x.equals("sellers")){
+            			%><a class="dropdown-item" href="addProduct">Add Products</a>
+            			<a class="dropdown-item" href="showProduct">Show Products</a>
+            			<%
+            		}
+                    %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
                     <a class="dropdown-item" href="#">Logout</a>
                 </div>
@@ -80,18 +89,113 @@
 
 </header>
 
+ <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Send a message</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body" >
+      <section class="vh-100" style="background-color: #ffffff;">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+      
+             
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+      
+                  <div class="row align-items-center pt-4 pb-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Name*</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg" required/>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Email*</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="email" class="form-control form-control-lg" required/>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+                 
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Phone Number*</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="number" class="form-control form-control-lg" required/>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Message*</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <textarea class="form-control" rows="3" required></textarea>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="px-5 py-4">
+                    <button data-close-button="" class="close-button">Close</button>
+                    <button type="submit" class="btn btn-primary btn-lg" onclick="openModal()" >Submit</button>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </div>
+    
+  </div>
+  
+  <div id="overlay"></div>
+
 <%
 	String prodnm =(String)request.getParameter("value");
-        
+        out.print(prodnm);
 	try {
 
 		Connection con;
 		PreparedStatement pst;
 		ResultSet rs;
-out.print("inside try");
+out.print("  inside try  ");
 		con = DBConnector.getConnected();
-		pst = con.prepareStatement("select * from products1 where prod_title='Orange';");
-		//pst.setString(1, prodnm);
+		pst = con.prepareStatement("select * from products1 where prod_title=?;");
+		pst.setString(1, prodnm);
 		rs = pst.executeQuery();
 		out.print("query executed");
 		while (rs.next()) {
@@ -101,6 +205,7 @@ out.print("inside try");
 		out.println("inside rs");
 		
 		String productName = rs.getString("prod_title");
+		String sellerId= rs.getString("seller_id");
 		String productId = rs.getString("prod_id");
 		String prod_quantity = rs.getString("prod_quantity");
 		int prod_price = rs.getInt("prod_price");
@@ -114,7 +219,8 @@ out.print("inside try");
 
 				</div>
 				<img src="images/Photos/<%=productName%>.jpg" alt="">
-				<h3><%=productName%></h3>
+				<h3><%=productName%> </h3>
+				<h3><%=sellerId%> </h3>
 				<h3><%=productId%></h3>
 				<h3><%=prod_quantity%></h3>
 				<h3><%=prod_price%></h3>
@@ -123,12 +229,17 @@ out.print("inside try");
 					<span>quantity : </span> <input type="number" min="1" max="1000"
 						value="1"> <span> /kg </span>
 				</div>
-				<a href="#" class="btn">Order</a>
-			</div>
+				<button data-modal-target="#modal">Send Message</button>
+  
+				<div>
+				 
+				
+				</div>
+				
+				 			</div>
 			</div>
 	</section>
-
-	<%
+<%
 	}
 
 	} catch (Exception e) {
@@ -136,5 +247,6 @@ out.print("inside try");
 	e.printStackTrace();
 	}
 	%>
+	
 </body>
 </html>

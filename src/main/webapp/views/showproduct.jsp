@@ -113,7 +113,7 @@
 					<span>quantity : </span> <input type="number" min="1" max="1000"
 						value="1"> <span> /kg </span>
 				</div>
-				<a href="#" class="btn">Order</a>
+				<a href="" class="btn">Order</a>
 			</div>
 			</div>
 	</section>
