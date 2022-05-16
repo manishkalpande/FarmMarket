@@ -15,7 +15,7 @@
             
             function makeGetRequest() {
                 nm=document.frm.bank.value;
-                http.open('get', 'searchproduct.jsp?prodno=' +search-box);
+                http.open('get', 'verifyotp.jsp?email=' +email);
                 http.onreadystatechange = processResponse;
                 http.send(null);
             }

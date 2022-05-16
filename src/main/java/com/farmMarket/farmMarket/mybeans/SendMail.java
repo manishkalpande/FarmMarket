@@ -17,7 +17,7 @@ import javax.mail.internet.MimeMessage;
 
 public class SendMail {
 
-	public static void sendmail() throws AddressException, MessagingException, IOException {
+	public static void sendmail(int otp,String x) throws AddressException, MessagingException, IOException {
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
@@ -33,13 +33,13 @@ public class SendMail {
 		Message msg = new MimeMessage(session);
 		msg.setFrom(new InternetAddress("tutorialspoint@gmail.com", false));
 
-		msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gauravkamble74@gmail.com"));
+		msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(x));
 		msg.setSubject("Tutorials point email");
-		msg.setContent("Tutorials point email", "text/html");
+		msg.setContent("Your OTP for verification is : "+otp, "text/html");
 		msg.setSentDate(new Date());
 
 		MimeBodyPart messageBodyPart = new MimeBodyPart();
-		messageBodyPart.setContent("Tutorials point email", "text/html");
+		messageBodyPart.setContent("Farm Market OTP Verification", "text/html");
 
 		MimeBodyPart attachPart = new MimeBodyPart();
 

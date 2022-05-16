@@ -35,7 +35,7 @@ public class DBConnector {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			dbconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=Manish12");	
+			dbconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=garry74");	
 		}
 		catch(Exception e)
 		{

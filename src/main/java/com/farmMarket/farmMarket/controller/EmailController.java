@@ -6,6 +6,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,18 +15,19 @@ import com.farmMarket.farmMarket.mybeans.SendMail;
 
 
 
-@RestController()
+@RestController
 public class EmailController {
 	
 	int otp=0;
 	
    @RequestMapping(value = "/sendemail")
-   public String sendEmail() throws AddressException, MessagingException, IOException {
+   public String sendEmail(@RequestParam("email") String x) throws AddressException, MessagingException, IOException {
 	   int min = 1000;
 		int max = 9999;
 	      otp= (int) (Math.random() * (max - min + 1) + min); 
-      SendMail.sendmail();
-      return "Email";   
+	      System.out.println("funt called");
+      SendMail.sendmail(otp,x);
+      return "forgetpassword";   
    }
    
    @RequestMapping(value = "/verifymail")

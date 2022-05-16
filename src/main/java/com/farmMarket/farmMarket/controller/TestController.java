@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.farmMarket.farmMarket.mybeans.ChangePassword;
@@ -22,11 +23,10 @@ import com.farmMarket.farmMarket.mybeans.PasswordHashing;
 import com.farmMarket.farmMarket.mybeans.Registration;
 
 @Controller
-public class TestController 
-{
+public class TestController {
 
-	//HttpSession ses=request.getSession(true);
-	
+	// HttpSession ses=request.getSession(true);
+
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String firstLine() {
 		return "home";
@@ -34,9 +34,18 @@ public class TestController
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String loginPage() {
-		return "login";
+		return "selectUsrType";
 	}
-
+	
+	@RequestMapping(path = "/usrtype", method = RequestMethod.POST)
+	public String userType(@RequestParam("test") String x) {
+		if(x.equals("customer")) {
+			return "login";
+		}else {
+			return "loginSeller";
+		}
+	}
+	
 	@RequestMapping(path = "/logincust", method = RequestMethod.POST)
 	public String customer(@ModelAttribute("reg") Registration reg, Model model) {
 		String un = reg.getUsernm();
@@ -44,9 +53,9 @@ public class TestController
 		PasswordHashing ph = new PasswordHashing();
 		String unm = ph.doHashing(un);
 		String psw = ph.doHashing(pw);
-		
-		System.out.println(un+" "+unm);
-		System.out.println(pw+" "+psw);
+
+		System.out.println(un + " " + unm);
+		System.out.println(pw + " " + psw);
 
 		Connection con;
 		PreparedStatement pst;
@@ -62,7 +71,47 @@ public class TestController
 			System.out.println("try cha andart");
 
 			if (rs.next()) {
-			//	ses.setAttribute("userid", rs.getNString(0));
+				// ses.setAttribute("userid", rs.getNString(0));
+				System.out.println("bundi");
+				check = true;
+			} else {
+				System.out.println("bhavika");
+				check = false;
+			}
+		} catch (Exception e) {
+			System.out.println("catch madhi");
+			System.out.println(e.getStackTrace());
+		}
+
+		return check ? "home1" : "failure";
+	}
+	
+	@RequestMapping(path = "/loginseller", method = RequestMethod.POST)
+	public String seller(@ModelAttribute("reg") Registration reg, Model model) {
+		String un = reg.getUsernm();
+		String pw = reg.getPasswd();
+		PasswordHashing ph = new PasswordHashing();
+		String unm = ph.doHashing(un);
+		String psw = ph.doHashing(pw);
+
+		System.out.println(un + " " + unm);
+		System.out.println(pw + " " + psw);
+
+		Connection con;
+		PreparedStatement pst;
+		ResultSet rs;
+		boolean check = false;
+
+		try {
+			con = DBConnector.getConnected();
+			pst = con.prepareStatement("select * from sellers where seller_name=? and seller_pass=?;");
+			pst.setNString(1, unm);
+			pst.setNString(2, psw);
+			rs = pst.executeQuery();
+			System.out.println("try cha andart");
+
+			if (rs.next()) {
+				// ses.setAttribute("userid", rs.getNString(0));
 				System.out.println("bundi");
 				check = true;
 			} else {
@@ -92,19 +141,61 @@ public class TestController
 		PasswordHashing ph = new PasswordHashing();
 		reg.setUsernm(ph.doHashing(reg.getUsernm()));
 		reg.setPasswd(ph.doHashing(reg.getPasswd()));
-		
+
 		System.out.println(reg);
 //		System.out.println(reg.getEmail());
 //		System.out.println(reg.getUsernm());
-		
+
 		Connection con;
 		CallableStatement cb;
 		ResultSet rs;
 
 		try {
 //			DBConnector db= (DBConnector) DBConnector.getConnected();
-			
-			con =DBConnector.getConnected();
+
+			con = DBConnector.getConnected();
+			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
+			cb.setString(1, userid);
+			cb.setString(2, reg.getPasswd());
+			cb.setString(3, reg.getUsernm());
+			cb.setString(4, reg.getEmail());
+			cb.setString(5, reg.getGen());
+			cb.setString(6, reg.getMobno());
+			cb.setString(7, reg.getDob());
+			cb.setString(8, reg.getAadharid());
+			cb.setString(9, reg.getAddress());
+			cb.execute();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return "login";
+	}
+	
+	@RequestMapping(value = "/registrationseller", method = RequestMethod.POST)
+	public String registrationSeller(@ModelAttribute("reg") Registration reg, Model model) {
+
+		String mob = String.valueOf(reg.getMobno());
+		String adh = String.valueOf(reg.getAadharid());
+		String userid = (mob.substring(0, 3)) + adh.substring(0, 3);
+		reg.setUserid(userid);
+		PasswordHashing ph = new PasswordHashing();
+		reg.setUsernm(ph.doHashing(reg.getUsernm()));
+		reg.setPasswd(ph.doHashing(reg.getPasswd()));
+
+		System.out.println(reg);
+//		System.out.println(reg.getEmail());
+//		System.out.println(reg.getUsernm());
+
+		Connection con;
+		CallableStatement cb;
+		ResultSet rs;
+
+		try {
+//			DBConnector db= (DBConnector) DBConnector.getConnected();
+
+			con = DBConnector.getConnected();
 			cb = con.prepareCall("call newcustomer(?,?,?,?,?,?,?,?,?)");
 			cb.setString(1, userid);
 			cb.setString(2, reg.getPasswd());
@@ -130,135 +221,153 @@ public class TestController
 		CallableStatement cb;
 		PreparedStatement pst;
 		ResultSet rs;
-		
-		if(order.getOrderStatus().equals("accepted")) {
+
+		if (order.getOrderStatus().equals("accepted")) {
 			try {
 				con = DBConnector.getConnected();
 				pst = con.prepareStatement("update order set order_status=? where order_id=?");
 				pst.setString(1, order.getOrderStatus());
 				pst.setString(2, order.getOrderid());
 				int x = pst.executeUpdate();
-				if(x>0) {
+				if (x > 0) {
 					System.out.println("order status updated in orders table");
 				}
-			}catch(Exception ex) {
+			} catch (Exception ex) {
 				ex.getStackTrace();
 			}
-			
+
 		}
-		
-		if(order.getOrderStatus().equals("declined")) {
+
+		if (order.getOrderStatus().equals("declined")) {
 			try {
 				con = DBConnector.getConnected();
 				pst = con.prepareStatement("update order set order_status=? where order_id=?");
 				pst.setString(1, order.getOrderStatus());
 				pst.setString(2, order.getOrderid());
 				int x = pst.executeUpdate();
-				if(x>0) {
+				if (x > 0) {
 					System.out.println("order status updated in orders table");
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-				catch(Exception e)
-				{
-					e.printStackTrace();
-				}
-			
-		if (order.getOrderid().contentEquals("")) {
-			int min = 10000000;
-			int max = 99999999;
-			int orderid = (int) (Math.random() * (max - min + 1) + min);
-			order.setOrderid(String.valueOf(orderid));
+
+			if (order.getOrderid().contentEquals("")) {
+				int min = 10000000;
+				int max = 99999999;
+				int orderid = (int) (Math.random() * (max - min + 1) + min);
+				order.setOrderid(String.valueOf(orderid));
+			}
+
+			try {
+				con = DBConnector.getConnected();
+				cb = con.prepareCall("call callOrder(?,?,?,?,?,?,?,?,?,?,?,?)");
+				cb.setString(1, order.getOrderid());
+				cb.setString(2, order.getCustomerid());
+				cb.setString(3, order.getSellerid());
+				cb.setString(4, order.getProdid());
+				cb.setDate(5, (Date) order.getDate());
+				cb.setNString(6, order.getProdTitle());
+				cb.setNString(7, order.getProdUnit());
+				cb.setNString(8, order.getProdQuantity());
+				cb.setInt(9, order.getProductPrice());
+				cb.setString(10, order.getPaymenttype());
+				cb.setNString(11, order.getOrderStatus());
+				cb.setNString(12, order.getMessage());
+				cb.execute();
+
+			} catch (Exception ex) {
+				ex.getStackTrace();
+			}
+
 		}
-		
-
-		try {
-			con = DBConnector.getConnected();
-			cb = con.prepareCall("call callOrder(?,?,?,?,?,?,?,?,?,?,?,?)");
-			cb.setString(1, order.getOrderid());
-			cb.setString(2, order.getCustomerid());
-			cb.setString(3, order.getSellerid());
-			cb.setString(4, order.getProdid());
-			cb.setDate(5, (Date) order.getDate());
-			cb.setNString(6, order.getProdTitle());
-			cb.setNString(7, order.getProdUnit());
-			cb.setNString(8, order.getProdQuantity());
-			cb.setInt(9, order.getProductPrice());
-			cb.setString(10, order.getPaymenttype());
-			cb.setNString(11, order.getOrderStatus());
-			cb.setNString(12, order.getMessage());
-			cb.execute();
-
-		} catch (Exception ex) {
-			ex.getStackTrace();
-		}
-
-		
-	}
 		return "";
 	}
-	
+
 	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
-	public String callforgetpass() {
-		
-		
-		return "forgetpassword";
+	public String callforgetpass(@ModelAttribute ChangePassword cp) {
+		String x = cp.getUsrtype();
+		return "enteremail";
 	}
 	
 	
+	
+	@RequestMapping(path = "/forgetpass1", method = RequestMethod.GET)
+	public String callforgetpass1(@ModelAttribute ChangePassword cp) {
+		String x = cp.getUsrtype();
+		return "login";
+	}
+
 	@RequestMapping(path = "/changepass", method = RequestMethod.GET)
 	public String changePass() {
 		return "changepwd";
 	}
-	
+
+	@RequestMapping(path = "/searchprod", method = RequestMethod.POST)
+	public String searchProd(@RequestParam("search-box") String x, Model model) {
+		model.addAttribute("prodnm", x);
+		System.out.println(x);
+		return "searchproduct1";
+	}
+
 	@RequestMapping(path = "/changepassword", method = RequestMethod.POST)
 	public String changePassword(@ModelAttribute ChangePassword cp) {
 		Connection con;
 		PreparedStatement pst;
 		ResultSet rs;
-		PasswordHashing ph= new PasswordHashing();
+		PasswordHashing ph = new PasswordHashing();
 		cp.setPasswd(ph.doHashing(cp.getPasswd()));
 		cp.setNewpass(ph.doHashing(cp.getNewpass()));
-		System.out.println(cp.getNewpass()+" "+cp.getPasswd());
+		System.out.println(cp.getNewpass() + " " + cp.getPasswd());
 		try {
 			System.out.println("try cha andar");
-			con =DBConnector.getConnected();
+			con = DBConnector.getConnected();
 			pst = con.prepareStatement("select cust_pass from customers where cust_id=431232");
-			
+
 //			pst.setString(1,"431232");
 			rs = pst.executeQuery();
 			System.out.println("query execute jhali");
-			if(rs.next()) {
+			if (rs.next()) {
 				System.out.println("rs cha andar aalo re");
-			if(cp.getPasswd().equals(rs.getNString("cust_pass"))) {
-				System.out.println("old pass check jhala");
-					
-				pst =con.prepareStatement("update customers set cust_pass=? where cust_id=?");
-				pst.setNString(1, cp.getNewpass());
-				pst.setNString(2, "431232");
-				int x = pst.executeUpdate();
-				System.out.println("pass change chi query jhalai");
-				if(x>0) {
-					System.out.println("password changed successfully");
-					return "home1";
-				}else {
-					System.out.println("password not updated");
+				if (cp.getPasswd().equals(rs.getNString("cust_pass"))) {
+					System.out.println("old pass check jhala");
+
+					pst = con.prepareStatement("update customers set cust_pass=? where cust_id=?");
+					pst.setNString(1, cp.getNewpass());
+					pst.setNString(2, "431232");
+					int x = pst.executeUpdate();
+					System.out.println("pass change chi query jhalai");
+					if (x > 0) {
+						System.out.println("password changed successfully");
+						return "home1";
+					} else {
+						System.out.println("password not updated");
+						return "changepass";
+					}
+
+				} else {
+					System.out.println("old password not enterd correctly");
 					return "changepass";
 				}
-				
-			}else {
-				System.out.println("old password not enterd correctly");
-				return "changepass";
-			}
-			}else {
+			} else {
 				System.out.println("kahi kr res null aahe");
 			}
-			
-		}catch(Exception ex) {
+
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		
+
 		return "changepwd";
 	}
-	
+
+	@RequestMapping(path = "/showprod", method = RequestMethod.GET)
+	public String showprod() {
+		return "showproduct";
+	}
+
+	@RequestMapping(path = "/showseller", method = RequestMethod.GET)
+	public String showseller() {
+		return "showsellers";
+	}
 
 }
