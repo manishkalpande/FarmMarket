@@ -10,6 +10,8 @@ private String prod_desc;
 private String prod_quantity;
 private String prod_quantity_type;
 private int prod_price;
+private String name;
+private String message;
 
 public AddProduct() {
 	prod_id="";
@@ -21,6 +23,8 @@ public AddProduct() {
 	prod_quantity="";
 	prod_quantity_type="";
 	prod_price=0;
+	name="";
+	message="";
 }
 
 public String getProd_id() {
@@ -95,12 +99,35 @@ public void setProd_price(int prod_price) {
 	this.prod_price = prod_price;
 }
 
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public String getMessage() {
+	return message;
+}
+
+public void setMessage(String message) {
+	this.message = message;
+}
+
 @Override
 public String toString() {
 	return "AddProduct [prod_id=" + prod_id + ", prod_name=" + prod_name + ", prod_type=" + prod_type + ", seller_id="
 			+ seller_id + ", prod_title=" + prod_title + ", prod_desc=" + prod_desc + ", prod_quantity=" + prod_quantity
-			+ ", prod_quantity_type=" + prod_quantity_type + ", prod_price=" + prod_price + "]";
+			+ ", prod_quantity_type=" + prod_quantity_type + ", prod_price=" + prod_price + ", name=" + name
+			+ ", message=" + message + ", getProd_id()=" + getProd_id() + ", getProd_name()=" + getProd_name()
+			+ ", getProd_type()=" + getProd_type() + ", getSeller_id()=" + getSeller_id() + ", getProd_title()="
+			+ getProd_title() + ", getProd_desc()=" + getProd_desc() + ", getProd_quantity()=" + getProd_quantity()
+			+ ", getProd_quantity_type()=" + getProd_quantity_type() + ", getProd_price()=" + getProd_price()
+			+ ", getName()=" + getName() + ", getMessage()=" + getMessage() + ", getClass()=" + getClass()
+			+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 }
+
 
 
 }

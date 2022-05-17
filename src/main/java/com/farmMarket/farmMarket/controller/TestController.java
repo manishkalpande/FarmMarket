@@ -23,6 +23,7 @@ import com.farmMarket.farmMarket.mybeans.DBConnector;
 import com.farmMarket.farmMarket.mybeans.Order;
 import com.farmMarket.farmMarket.mybeans.PasswordHashing;
 import com.farmMarket.farmMarket.mybeans.Registration;
+import com.farmMarket.farmMarket.mybeans.SendMail;
 
 @Controller
 public class TestController {
@@ -296,15 +297,16 @@ public class TestController {
 		return "loginSeller";
 	}
 
-	@RequestMapping(path = "/requestorder", method = RequestMethod.GET)
+	@RequestMapping(path = "/requestorder", method = RequestMethod.POST)
 	public String sendMessage(@ModelAttribute Order order) {
 		Connection con;
 		CallableStatement cb;
 		PreparedStatement pst;
 		ResultSet rs;
-
+		System.out.println(order.toString());
 		if (order.getOrderStatus().equals("accepted")) {
 			try {
+				System.out.println("inside try of order");
 				con = DBConnector.getConnected();
 				pst = con.prepareStatement("update order set order_status=? where order_id=?");
 				pst.setString(1, order.getOrderStatus());
@@ -332,22 +334,27 @@ public class TestController {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}
 
-			if (order.getOrderid().contentEquals("")) {
+			if (order.getOrderid().equals("")) {
+				System.out.println("order id created");
 				int min = 10000000;
 				int max = 99999999;
 				int orderid = (int) (Math.random() * (max - min + 1) + min);
 				order.setOrderid(String.valueOf(orderid));
-			}
+				System.out.println(order.toString());
 
 			try {
+				
 				con = DBConnector.getConnected();
-				cb = con.prepareCall("call callOrder(?,?,?,?,?,?,?,?,?,?,?,?)");
+				System.out.println("inside try");
+				cb = con.prepareCall("call callOrder(?,?,?,?,?,now(),?,?,?,?,?,?,?);");
+				System.out.println("inside try 2");
 				cb.setString(1, order.getOrderid());
-				cb.setString(2, order.getCustomerid());
-				cb.setString(3, order.getSellerid());
-				cb.setString(4, order.getProdid());
-				cb.setDate(5, (Date) order.getDate());
+				cb.setString(2, order.getName());
+				cb.setString(3, order.getCustomerid());
+				cb.setString(4, order.getSellerid());
+				cb.setString(5, order.getProdid());
 				cb.setNString(6, order.getProdTitle());
 				cb.setNString(7, order.getProdUnit());
 				cb.setNString(8, order.getProdQuantity());
@@ -355,9 +362,28 @@ public class TestController {
 				cb.setString(10, order.getPaymenttype());
 				cb.setNString(11, order.getOrderStatus());
 				cb.setNString(12, order.getMessage());
-				cb.execute();
+				boolean s=cb.execute();
+				s=true;
+				System.out.println(s+" execute query");
+				if(s)
+				{
+					String email="";
+					System.out.println("order executed");
+					System.out.println(order.getSellerid());
+					pst = con.prepareStatement("select seller_email from sellers where seller_id=?;");
+					pst.setNString(1, order.getSellerid());
+					rs = pst.executeQuery();
+					if(rs.next())
+					{
+					email=rs.getString("seller_email");
+					System.out.println(email);
+					SendMail.sendmail(0,email,order.getMessage());
+					 System.out.println("email send ");
+					}
+				}
 
 			} catch (Exception ex) {
+				System.out.println("inside order catch");
 				ex.getStackTrace();
 			}
 

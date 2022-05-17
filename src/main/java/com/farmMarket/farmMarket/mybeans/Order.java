@@ -1,10 +1,12 @@
 package com.farmMarket.farmMarket.mybeans;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Order {
 	
 	private String orderid;
+	private String name;
 	private String customerid;
 	private String sellerid;
 	private String prodid;
@@ -20,6 +22,7 @@ public class Order {
 	public Order()
 	{
 		orderid="";
+		name="";
 		customerid="";
 		sellerid="";
 		prodid="";
@@ -64,7 +67,7 @@ public class Order {
 	public void setProdid(String prodid) {
 		this.prodid = prodid;
 	}
-
+	
 	public Date getDate() {
 		return date;
 	}
@@ -131,6 +134,31 @@ public class Order {
 	public void setProdTitle(String prodTitle) {
 		this.prodTitle = prodTitle;
 	}
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [orderid=" + orderid + ", name=" + name + ", customerid=" + customerid + ", sellerid=" + sellerid
+				+ ", prodid=" + prodid + ", productPrice=" + productPrice + ", prodQuantity=" + prodQuantity
+				+ ", prodUnit=" + prodUnit + ", prodTitle=" + prodTitle + ", date=" + date + ", paymenttype="
+				+ paymenttype + ", orderStatus=" + orderStatus + ", message=" + message + "]";
+	}
+
+
+	
+
+	
+
+
 
 	
 
