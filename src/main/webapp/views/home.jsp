@@ -79,7 +79,7 @@
 	<section class="home" id="home">
 
 		<div class="image">
-			<img src="images/home-img.png" alt="">
+			<img src="images/home-img.jpg" alt="">
 		</div>
 
 		<div class="content">
@@ -131,26 +131,26 @@
 			<div class="box">
 				<h3>Vegetables</h3>
 
-				<img src="images/category-1.png" alt=""> <a href="#"
+				<img src="images/category-1.jpg" alt=""> <a href="#"
 					class="btn">shop now</a>
 			</div>
 			<div class="box">
 				<h3>Beverages</h3>
 
-				<img src="images/category-2.png" alt=""> <a href="#"
+				<img src="images/category-2.jpg" alt=""> <a href="#"
 					class="btn">shop now</a>
 			</div>
 			<div class="box">
 				<h3>wheat</h3>
 
 				<img
-					src="images/wheat-grains-isolated-white-background_88281-1749.webp"
+					src="images/wheat-grains-isolated-white-background_88281-1749.jpg"
 					alt=""> <a href="#" class="btn">shop now</a>
 			</div>
 			<div class="box">
 				<h3>Fruites</h3>
 
-				<img src="images/category-4.png" alt=""> <a href="#"
+				<img src="images/category-4.jpg" alt=""> <a href="#"
 					class="btn">shop now</a>
 			</div>
 
@@ -256,7 +256,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Beetroot -Chakundar.png" alt="">
+				<img src="images/Photos/Beetroot -Chakundar.jpg" alt="">
 				<h3>Beetroot -Chakundar</h3>
 
 				<div class="quantity">
@@ -272,7 +272,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Bell Pepper -Capsicum.jpeg" alt="">
+				<img src="images/Photos/Bell Pepper -Capsicum.jpg" alt="">
 				<h3>BellPepper-Capsicum</h3>
 
 				<div class="quantity">
@@ -320,7 +320,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Black-eye bean.webp" alt="">
+				<img src="images/Photos/Black-eye bean.jpg" alt="">
 				<h3>Black-eye bean</h3>
 
 				<div class="quantity">
@@ -432,7 +432,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Cauliflower-Phool Gobhi.jpeg" alt="">
+				<img src="images/Photos/Cauliflower-Phool Gobhi.jpg" alt="">
 				<h3>Cauliflower</h3>
 
 				<div class="quantity">
@@ -464,7 +464,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Coconut.jpeg" alt="">
+				<img src="images/Photos/Coconut.jpg" alt="">
 				<h3>Coconut</h3>
 
 				<div class="quantity">
@@ -496,7 +496,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Dairy & cheese or substitutes.jpeg" alt="">
+				<img src="images/Photos/Dairy & cheese or substitutes.jpg" alt="">
 				<h3>Dairy & cheese</h3>
 
 				<div class="quantity">
@@ -544,7 +544,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/garlic2.jpeg" alt="">
+				<img src="images/Photos/garlic2.jpg" alt="">
 				<h3>garlic2</h3>
 
 				<div class="quantity">
@@ -576,7 +576,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Grain- wheat -Cereals.png" alt="">
+				<img src="images/Photos/Grain- wheat -Cereals.jpg" alt="">
 				<h3>wheat</h3>
 
 				<div class="quantity">
@@ -592,7 +592,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Grapes.png" alt="">
+				<img src="images/Photos/Grapes.jpg" alt="">
 				<h3>Grapes</h3>
 
 				<div class="quantity">
@@ -624,7 +624,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Green chilli.jpeg" alt="">
+				<img src="images/Photos/Green chilli.jpg" alt="">
 				<h3>Green chilli</h3>
 
 				<div class="quantity">
@@ -656,7 +656,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Guava.jfif" alt="">
+				<img src="images/Photos/Guava.jpg" alt="">
 				<h3>Guava</h3>
 
 				<div class="quantity">
@@ -736,7 +736,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Kinnow(Kinnu).jpeg" alt="">
+				<img src="images/Photos/Kinnow(Kinnu).jpg" alt="">
 				<h3>Kinnow(Kinnu)</h3>
 
 				<div class="quantity">
@@ -768,7 +768,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Lemon.png" alt="">
+				<img src="images/Photos/Lemon.jpg" alt="">
 				<h3>Lemon</h3>
 
 				<div class="quantity">
@@ -799,7 +799,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Mango.jpeg" alt="">
+				<img src="images/Photos/Mango.jpg" alt="">
 				<h3>Mango</h3>
 
 				<div class="quantity">
@@ -815,7 +815,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/mausami.jpeg" alt="">
+				<img src="images/Photos/mausami.jpg" alt="">
 				<h3>mausami</h3>
 
 				<div class="quantity">
@@ -831,7 +831,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Onions.png" alt="">
+				<img src="images/Photos/Onions.jpg" alt="">
 				<h3>Onions</h3>
 
 				<div class="quantity">
@@ -895,7 +895,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/POINTED GOURD.jpeg" alt="">
+				<img src="images/Photos/POINTED GOURD.jpg" alt="">
 				<h3>POINTED GOURD</h3>
 
 				<div class="quantity">
@@ -927,7 +927,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Potato.jpeg" alt="">
+				<img src="images/Photos/Potato.jpg" alt="">
 				<h3>Potato</h3>
 
 				<div class="quantity">
@@ -943,7 +943,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/pumpkin.jpeg" alt="">
+				<img src="images/Photos/pumpkin.jpg" alt="">
 				<h3>pumpkin</h3>
 
 				<div class="quantity">
@@ -1071,7 +1071,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Sweet potato.jpeg" alt="">
+				<img src="images/Photos/Sweet potato.jpg" alt="">
 				<h3>Sweet potato</h3>
 
 				<div class="quantity">
@@ -1087,7 +1087,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Tamarind (imli).png" alt="">
+				<img src="images/Photos/Tamarind (imli).jpg" alt="">
 				<h3>Tamarind (imli)</h3>
 
 				<div class="quantity">
@@ -1103,7 +1103,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/Photos/Tomato.jpeg" alt="">
+				<img src="images/Photos/Tomato.jpg" alt="">
 				<h3>Tomato</h3>
 
 				<div class="quantity">
@@ -1231,7 +1231,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-1.png" alt="">
+				<img src="images/product-1.jpg" alt="">
 				<h3>organic banana</h3>
 
 				<div class="quantity">
@@ -1263,7 +1263,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-2.png" alt="">
+				<img src="images/product-2.jpg" alt="">
 				<h3>organic tomato</h3>
 
 				<div class="quantity">
@@ -1279,7 +1279,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-3.png" alt="">
+				<img src="images/product-3.jpg" alt="">
 				<h3>organic orange</h3>
 
 				<div class="quantity">
@@ -1295,7 +1295,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-4.png" alt="">
+				<img src="images/product-4.jpg" alt="">
 				<h3>natural mild</h3>
 
 				<div class="quantity">
@@ -1311,7 +1311,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-5.png" alt="">
+				<img src="images/product-5.jpg" alt="">
 				<h3>organic grapes</h3>
 
 				<div class="quantity">
@@ -1327,7 +1327,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-6.png" alt="">
+				<img src="images/product-6.jpg" alt="">
 				<h3>natural almonts</h3>
 
 				<div class="quantity">
@@ -1343,7 +1343,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-7.png" alt="">
+				<img src="images/product-7.jpg" alt="">
 				<h3>organic apple</h3>
 
 				<div class="quantity">
@@ -1359,7 +1359,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-8.png" alt="">
+				<img src="images/product-8.jpg" alt="">
 				<h3>natural butter</h3>
 
 				<div class="quantity">
@@ -1375,7 +1375,7 @@
 					<a href="#" class="fas fa-heart"></a>
 
 				</div>
-				<img src="images/product-9.png" alt="">
+				<img src="images/product-9.jpg" alt="">
 				<h3>organic carrot</h3>
 
 				<div class="quantity">

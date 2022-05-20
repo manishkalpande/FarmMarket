@@ -25,12 +25,12 @@ ${email }
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Update</p>
       
-                      <form class="mx-1 mx-md-4" name="frm" method="post">
+                      <form class="mx-1 mx-md-4" name="frm" method="post" action="updateprofile">
       
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="text" id="form3Example1c" class="form-control" value="${usernm }"/>
+                            <input type="text" id="usernm" name="usernm" class="form-control" value="${usernm }"/>
                             <label class="form-label" for="form3Example1c">Your Name</label>
                           </div>
                         </div>
@@ -38,7 +38,7 @@ ${email }
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" class="form-control" value="${email }"/>
+                            <input type="email" id="email" name="email" class="form-control" value="${email }"/>
                             <label class="form-label" for="form3Example3c">Your Email</label>
                           </div>
                         </div>
@@ -48,7 +48,7 @@ ${email }
                             <div class="form-outline flex-fill mb-0">
                                 <div class="col-md-6 mb-4">       
                                     <label class="form-label" for="form3Example3c">Gender</label>                    
-                                <select class="select" >
+                                <select class="select" id="gen" name="gen">
                                     <option value="1" disabled>Gender</option>
                                     <option value="${gen }">${gen }</option>
                                     
@@ -60,7 +60,7 @@ ${email }
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="number" id="form3Example3c" class="form-control" value="${mobno }"/>
+                              <input type="number" id="mobno" name="mobno" class="form-control" value="${mobno }"/>
                               <label class="form-label" for="form3Example3c">Your Mobile No</label>
                             </div>
                           </div>
@@ -68,7 +68,7 @@ ${email }
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="date" class="form-control" id="exampleDatepicker1" value="${dob }"/>
+                                <input type="date" class="form-control" id="dob" name="dob" value="${dob }"/>
                               <label for="exampleDatepicker1" class="form-label">Select a date</label>
                             </div>
                           </div>
@@ -76,7 +76,7 @@ ${email }
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="number" id="form3Example3c" class="form-control" value="${aadharid}"/>
+                              <input type="number" id="aadharid" name="aadharid" class="form-control" value="${aadharid}"/>
                               <label class="form-label" for="form3Example3c">Your Aadhar No</label>
                             </div>
                           </div>
@@ -84,13 +84,13 @@ ${email }
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="text" id="form3Example8" class="form-control form-control-lg" value="${address}"/>
+                                <input type="text" id="adderess" name="address" class="form-control form-control-lg" value="${address}"/>
                                 <label class="form-label" for="form3Example8">Address</label>
                             </div>
                           </div>
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" class="btn btn-primary btn-lg"  id="button1"">Update</button>
+                          <button type="submit" class="btn btn-primary btn-lg"  id="button1"">Update</button>
                           
 
                         </div>

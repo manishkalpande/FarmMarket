@@ -5,30 +5,34 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Farm Market 2</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- custom css file link  -->
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- custom css file link  -->
-    
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<!-- font awesome cdn link  -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
+<!-- custom css file link  -->
+<link href="css/sendmessage.css" rel="stylesheet">
+<script defer src="js/sendmessage.js"></script>
 
+<link rel="stylesheet" href="css/style.css">
+<script src="js/searchproduct.js" type="text/javascript"
+	language="javascript"></script>
+<style>
+.bcontent {
+	margin-top: 10px;
+}
+</style>
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/searchproduct.js" type="text/javascript" language="javascript"></script>
-    <style>
-        .bcontent {
-            margin-top: 10px;
-        }
-    </style>
-</head>
+    </head>
 <body>
 
 <!-- header section starts  -->
@@ -66,7 +70,7 @@
                 <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="myacc">My Account</a>
-                    <a class="dropdown-item" href="#">My Show All s</a>
+                    <a class="dropdown-item" href="trans">My Orders</a>
                     <%
                     String x =(String)session.getAttribute("usrtype");
             		if(x.equals("sellers")){
@@ -76,7 +80,7 @@
             		}
                     %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('I am a popup!')">Logout</a>
                 </div>
                 
            
@@ -93,7 +97,7 @@
 <section class="home" id="home">
 
     <div class="image">
-        <img src="images/home-img.png" alt="">
+        <img src="images/home-img.jpg" alt="">
     </div>
 
     <div class="content">
@@ -141,25 +145,25 @@
         <div class="box">
             <h3>Vegetables</h3>
            
-            <img src="images/category-1.png" alt="">
+            <img src="images/category-1.jpg" alt="">
             <a href="showprod?value=vegetable" class="btn">shop now</a>
         </div>
         <div class="box">
             <h3>Beverages</h3>
             
-            <img src="images/category-2.png" alt="">
+            <img src="images/category-2.jpg" alt="">
             <a href="showprod?value=Beverages" class="btn">shop now</a>
         </div>
         <div class="box">
             <h3>wheat</h3>
             
-            <img src="images/wheat-grains-isolated-white-background_88281-1749.webp" alt="">
+            <img src="images/wheat-grains-isolated-white-background_88281-1749.jpg" alt="">
             <a href="showprod?value=wheat" class="btn">shop now</a>
         </div>
         <div class="box">
             <h3>Fruites</h3>
             
-            <img src="images/category-4.png" alt="">
+            <img src="images/category-4.jpg" alt="">
             <a href="showprod?value=Fruits" class="btn">shop now</a>
         </div>
 
@@ -181,7 +185,7 @@
                 <a href="#" class="fas fa-heart"></a>
             
             </div>
-            <img src="images/product-1.png" alt="">
+            <img src="images/product-1.jpg" alt="">
             <h3>organic banana</h3>
            
     
@@ -200,7 +204,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Apricot" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -214,7 +218,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Arrowroot" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -228,7 +232,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Avocado" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -242,7 +246,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Banana" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -256,7 +260,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Beans" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -265,12 +269,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Beetroot -Chakundar.png" alt="">
+            <img src="images/Photos/Beetroot -Chakundar.jpg" alt="">
             <h3>Beetroot -Chakundar</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Beetroot -Chakundar" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -279,12 +283,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Bell Pepper -Capsicum.jpeg" alt="">
+            <img src="images/Photos/Bell Pepper -Capsicum.jpg" alt="">
             <h3>BellPepper-Capsicum</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=BellPepper-Capsicum" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -298,7 +302,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Bitter Gourd- Karela" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -312,7 +316,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Black Pepper" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -321,12 +325,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Black-eye bean.webp" alt="">
+            <img src="images/Photos/Black-eye bean.jpg" alt="">
             <h3>Black-eye bean</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Black-eye bean" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -340,7 +344,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Bottle Gourd-Laukee" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -354,7 +358,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Brinjal" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -368,7 +372,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Broad bean" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -382,7 +386,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Broccoli" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -396,7 +400,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Cabbage Pattagobhi" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -410,7 +414,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Carrot-Gajar" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -419,12 +423,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Cauliflower-Phool Gobhi.jpeg" alt="">
+            <img src="images/Photos/Cauliflower-Phool Gobhi.jpg" alt="">
             <h3>Cauliflower</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Cauliflower" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -438,7 +442,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Cherry" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -447,12 +451,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Coconut.jpeg" alt="">
+            <img src="images/Photos/Coconut.jpg" alt="">
             <h3>Coconut</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Coconut" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -466,7 +470,7 @@
            
     
             
-            <a href="#" class="btn">add to cart</a>
+            <a href="showseller?value=Cucumber (Khira)" class="btn">add to cart</a>
         </div>
 
         <div class="box">
@@ -475,12 +479,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Dairy & cheese or substitutes.jpeg" alt="">
+            <img src="images/Photos/Dairy & cheese or substitutes.jpg" alt="">
             <h3>Dairy & cheese </h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Dairy & cheese" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -494,7 +498,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=DRUMSTICK" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -508,7 +512,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=garlic" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -517,12 +521,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/garlic2.jpeg" alt="">
+            <img src="images/Photos/garlic2.jpg" alt="">
             <h3>garlic2</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=garlic2" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -536,7 +540,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Ginger" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -545,12 +549,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Grain- wheat -Cereals.png" alt="">
+            <img src="images/Photos/Grain- wheat -Cereals.jpg" alt="">
             <h3>wheat</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=wheat" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -559,12 +563,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Grapes.png" alt="">
+            <img src="images/Photos/Grapes.jpg" alt="">
             <h3>Grapes</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Grapes" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -578,7 +582,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Grass Broom" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -587,12 +591,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Green chilli.jpeg" alt="">
+            <img src="images/Photos/Green chilli.jpg" alt="">
             <h3>Green chilli</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Green chilli" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -606,7 +610,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=GREEN PAPAYA" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -615,12 +619,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Guava.jfif" alt="">
+            <img src="images/Photos/Guava.jpg" alt="">
             <h3>Guava</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Guava" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -634,7 +638,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Kabuli Chana" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -648,7 +652,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Kasoori Methi" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -662,7 +666,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Kharbuja(Muskmelon)" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -676,7 +680,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Kharbuja(Muskmelon)2" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -685,12 +689,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Kinnow(Kinnu).jpeg" alt="">
+            <img src="images/Photos/Kinnow(Kinnu).jpg" alt="">
             <h3>Kinnow(Kinnu)</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Kinnow(Kinnu)" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -704,7 +708,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=kumato" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -713,12 +717,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Lemon.png" alt="">
+            <img src="images/Photos/Lemon.jpg" alt="">
             <h3>Lemon</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Lemon" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -732,7 +736,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=LITCHE" class="btn">Show All </a>
         </div>
         <div class="box">
             
@@ -740,12 +744,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Mango.jpeg" alt="">
+            <img src="images/Photos/Mango.jpg" alt="">
             <h3>Mango</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Mango" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -754,12 +758,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/mausami.jpeg" alt="">
+            <img src="images/Photos/mausami.jpg" alt="">
             <h3>mausami</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=mausami" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -768,12 +772,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Onions.png" alt="">
+            <img src="images/Photos/Onions.jpg" alt="">
             <h3>Onions</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Onions" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -787,7 +791,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Orange" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -801,7 +805,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=peas" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -815,7 +819,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Pineapple (ananas)" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -824,12 +828,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/POINTED GOURD.jpeg" alt="">
+            <img src="images/Photos/POINTED GOURD.jpg" alt="">
             <h3>POINTED GOURD</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=POINTED GOURD" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -843,7 +847,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Pomogranates" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -852,12 +856,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Potato.jpeg" alt="">
+            <img src="images/Photos/Potato.jpg" alt="">
             <h3>Potato</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Potato" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -866,12 +870,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/pumpkin.jpeg" alt="">
+            <img src="images/Photos/pumpkin.jpg" alt="">
             <h3>pumpkin</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=pumpkin" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -885,7 +889,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Raw Peanuts" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -899,7 +903,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=reetha" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -913,7 +917,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Seeds" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -927,7 +931,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Soyabean" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -941,7 +945,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Spray Dried Coffee" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -955,7 +959,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Strawberries" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -969,7 +973,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Strawberry" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -978,12 +982,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Sweet potato.jpeg" alt="">
+            <img src="images/Photos/Sweet potato.jpg" alt="">
             <h3>Sweet potato</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Sweet potato" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -992,12 +996,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Tamarind (imli).png" alt="">
+            <img src="images/Photos/Tamarind (imli).jpg" alt="">
             <h3>Tamarind (imli)</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Tamarind (imli)" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1006,7 +1010,7 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/Photos/Tomato.jpeg" alt="">
+            <img src="images/Photos/Tomato.jpg" alt="">
             <h3>Tomato</h3>
            
     
@@ -1025,7 +1029,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Turmeric (Haldi)" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1039,7 +1043,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=urad Dal" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1053,7 +1057,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=VEG JACK FRUIT" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1067,7 +1071,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=watermelon" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1095,7 +1099,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Zucchini" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1109,7 +1113,7 @@
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=Apricot" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1117,12 +1121,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-2.png" alt="">
+            <img src="images/product-2.jpg" alt="">
             <h3>organic tomato</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=organic tomato" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1130,12 +1134,12 @@
                 <a href="#" class="fas fa-heart"></a>
              
             </div>
-            <img src="images/product-3.png" alt="">
+            <img src="images/product-3.jpg" alt="">
             <h3>organic orange</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=organic orange" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1143,12 +1147,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-4.png" alt="">
+            <img src="images/product-4.jpg" alt="">
             <h3>natural mild</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=natural mild" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1156,12 +1160,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-5.png" alt="">
+            <img src="images/product-5.jpg" alt="">
             <h3>organic grapes</h3>
            
     
             
-            <a href="#" class="btn">add to cart</a>
+            <a href="showseller?value=organic grapes" class="btn">add to cart</a>
         </div>
 
         <div class="box">
@@ -1169,12 +1173,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-6.png" alt="">
+            <img src="images/product-6.jpg" alt="">
             <h3>natural almonts</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=natural almonts" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1182,12 +1186,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-7.png" alt="">
+            <img src="images/product-7.jpg" alt="">
             <h3>organic apple</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=organic apple" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1195,12 +1199,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-8.png" alt="">
+            <img src="images/product-8.jpg" alt="">
             <h3>natural butter</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=natural butter" class="btn">Show All </a>
         </div>
 
         <div class="box">
@@ -1208,12 +1212,12 @@
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
-            <img src="images/product-9.png" alt="">
+            <img src="images/product-9.jpg" alt="">
             <h3>organic carrot</h3>
            
     
             
-            <a href="#" class="btn">Show All </a>
+            <a href="showseller?value=organic carrot" class="btn">Show All </a>
         </div>
 
     </div>

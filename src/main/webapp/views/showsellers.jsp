@@ -93,7 +93,7 @@
 			<div id="menu-bar" class="fas fa-bars"></div>
 
 			<nav class="navbar">
-				<a href="#home">home</a> <a href="#category">category</a> <a
+				<a href="home1">home</a> <a href="#category">category</a> <a
 					href="#product">product</a> <a href="#deal">deal</a> <a
 					href="#contact">contact</a>
 			</nav>
@@ -125,8 +125,6 @@
 		</div>
 
 	</header>
-
-
 
 	<%
 	String prodnm = (String) request.getParameter("value");
@@ -182,7 +180,7 @@
 					<span>quantity : </span> <input type="number" min="1" max="1000"
 						value="<%=prod_quantity%>"> <span><%=prod_quantity_type%></span>
 				</div>
-				<button data-modal-target="#modal">Send Message</button>
+				<button data-modal-target="#modal" name="seller" value="<%=sellerId%>">Send Message</button>
 
 				<div></div>
 
@@ -194,18 +192,19 @@
 			<div class="title">Send a message</div>
 			<button data-close-button class="close-button">&times;</button>
 		</div>
+		<% String sellerID=""; %>
 		<div class="modal-body">
 			<section class="vh-100" style="background-color: #ffffff;">
 				<div class="container h-100">
 					<div
 						class="row d-flex justify-content-center align-items-center h-100">
 						<div class="col-xl-9">
-
+							<% sellerID=request.getParameter("seller"); %>
 							<form name="frm2" id="frm2" method="post" action=requestorder>
 								<input type="hidden" id="customerid" name="customerid"
 									value="<%=session.getAttribute("userid")%>"> 
 									<%-- <input type="hidden" id="sellerid" name="sellerid" value="<%=sellerId%>"> --%>
-									<input type="hidden" id="sellerid" name="sellerid" value="684336"> 
+									<%-- <input type="hidden" id="sellerid" name="sellerid" value="<%=sellerId%>">  --%>
 									<input type="hidden" id="prodid" name="prodid" value="<%=productId%>">
 									 <input type="hidden" id="prodTitle" name="prodTitle" value="<%=productName%>">
 								<%-- <input type="hidden" id="productPrice" value="<%=prod_price%>">
@@ -236,11 +235,15 @@
 										<label class="form-label" for="form3Example3c">Name</label>
 											<input type="text" id="name" name="name"
 													class="form-control form-control-lg" required />
-											
+								<hr class="mx-n3">
+														
+											<label class="form-label" for="form3Example3c">Seller id</label>
+											<input type="text" id="sellerid" name="sellerid"
+													class="form-control form-control-lg" required />
 										
 										
 
-										<hr class="mx-n3">
+										
 
 										<div class="form-group">
 											<label for="productquantity">Product Quantity</label> <input

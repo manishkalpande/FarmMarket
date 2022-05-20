@@ -38,7 +38,7 @@
     <div class="header-1">
 
         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
-
+		<%=session.getId()%>
         <form action="searchprod" class="search-box-container" method="post">
             <input type="search" id="search-box" name="search-box" placeholder="search here..." >
             <label for="search-box" class="fas fa-search" ></label>
@@ -52,7 +52,7 @@
         <div id="menu-bar" class="fas fa-bars"></div>
 
         <nav class="navbar">
-            <a href="#home">home</a>
+            <a href="home1">home</a>
             <a href="#category">category</a>
             <a href="#product">product</a>
             <a href="#deal">deal</a>
@@ -65,10 +65,18 @@
     
                 <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">My Account</a>
-                    <a class="dropdown-item" href="#">My Orders</a>
+                    <a class="dropdown-item" href="myacc">My Account</a>
+                    <a class="dropdown-item" href="trans">My Orders</a>
+                    <%
+                    String x =(String)session.getAttribute("usrtype");
+            		if(x.equals("sellers")){
+            			%><a class="dropdown-item" href="addProduct">Add Products</a>
+            			<a class="dropdown-item" href="showProduct">Show Products</a>
+            			<%
+            		}
+                    %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('Are you sure you want to logout?')">Logout</a>
                 </div>
                 
            
@@ -77,7 +85,6 @@
     </div>
 
 </header>
-
 <%
 	String prodnm =(String)request.getParameter("value");
         
@@ -109,11 +116,11 @@
 				</div>
 				<img src="images/Photos/<%=productName%>.jpg" alt="">
 				<h3><%=productName%></h3>
-				<div class="quantity">
+				<!-- <div class="quantity">
 					<span>quantity : </span> <input type="number" min="1" max="1000"
 						value="1"> <span> /kg </span>
-				</div>
-				<a href="" class="btn">Order</a>
+				</div> -->
+				<a href="showseller?value=<%=productName%>" class="btn">Order</a>
 			</div>
 			</div>
 	</section>

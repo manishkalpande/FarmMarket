@@ -37,10 +37,12 @@ public class TestController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/abc", method = RequestMethod.GET)
-	public String abc() {
-		return "abc";
+	@RequestMapping(value = "/home1", method = RequestMethod.GET)
+	public String homepage() {
+		return "home1";
 	}
+	
+	
 	
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
@@ -55,31 +57,34 @@ public class TestController {
 		String x = (String) session.getAttribute("usrtype");
 		String id = (String) session.getAttribute("userid");
 		System.out.println(x);
-		
+		System.out.println(id);
 		Connection con;
 		PreparedStatement pst;
 		ResultSet rs;
 		boolean check = false;
 
 		try {
-			if(x.equals("customer")) {
+			if(x.equals("customers")) {
 				
 			con = DBConnector.getConnected();
 			pst = con.prepareStatement("select * from customers where cust_id=?;");
 			pst.setString(1, id);	
 			rs = pst.executeQuery();
-			System.out.println("try cha andart "+rs);
+			System.out.println("try cha andart xxx"+rs);
 
 			if (rs.next()) {
 				System.out.println("if cha andar");
-				reg.setUsernm(rs.getString("cust_name"));
-				reg.setEmail(rs.getString("cust_email"));
-				reg.setGen(rs.getString("cust_gen"));
-				reg.setMobno(rs.getString("cust_mob"));
-				reg.setAadharid(rs.getString("cust_addhar_vid"));
-				reg.setAddress(rs.getString("cust_address"));
-				model.addAllAttributes((Collection<Registration>) reg);
-				System.out.println(reg);
+				model.addAttribute("usernm",rs.getString("cust_name"));
+				model.addAttribute("email", rs.getString("cust_email"));
+				model.addAttribute("gen", rs.getString("cust_gen"));
+				model.addAttribute("mobno", rs.getString("cust_mob"));
+				model.addAttribute("dob", rs.getDate("cust_dob"));
+				
+				model.addAttribute("aadharid", rs.getString("cust_aadhar_vid"));
+				model.addAttribute("address", rs.getString("cust_address"));
+				System.out.println("xhamster"+model);
+//				model.addAllAttributes((Collection<Registration>) reg);
+//				System.out.println(reg);
 			}
 			}else {
 	
@@ -93,13 +98,14 @@ public class TestController {
 				System.out.println("try cha andart");
 
 				if (rs.next()) {
-					reg.setUsernm(rs.getString("seller_name"));
-					reg.setEmail(rs.getString("seller_email"));
-					reg.setGen(rs.getString("seller_gen"));
-					reg.setMobno(rs.getString("seller_mob"));
-					reg.setAadharid(rs.getString("seller_addhar_vid"));
-					reg.setAddress(rs.getString("seller_address"));
-					model.addAllAttributes((Collection<Registration>) reg);
+					model.addAttribute("usernm",rs.getString("seller_name"));
+					model.addAttribute("email", rs.getString("seller_email"));
+					model.addAttribute("gen", rs.getString("seller_gen"));
+					model.addAttribute("mobno", rs.getString("seller_mob"));
+					model.addAttribute("dob", rs.getDate("seller_dob"));
+					
+					model.addAttribute("aadharid", rs.getString("seller_aadhar_vid"));
+					model.addAttribute("address", rs.getString("seller_address"));
 					
 				}
 			}
@@ -202,6 +208,58 @@ public class TestController {
 
 		return check ? "home1" : "failure";
 	}
+	@RequestMapping(value = "/updateprofile", method = RequestMethod.POST)
+	public String updateProfile(@ModelAttribute Registration reg,HttpSession session) {
+		Connection con;
+		PreparedStatement pst;
+		String usrname = (String) session.getAttribute("usrtype");
+		String userid = (String) session.getAttribute("userid");
+		System.out.println(usrname+"  "+userid);
+		System.out.println(reg);
+		if(usrname.equals("customers")) {
+		try {
+//			DBConnector db= (DBConnector) DBConnector.getConnected();
+
+			con = DBConnector.getConnected();
+			pst = con.prepareStatement("update customers set cust_name=?,cust_gen=?,cust_email=?,cust_mob=?,cust_aadhar_vid=?,cust_address=? where cust_id=?");
+			
+			pst.setString(1, reg.getUsernm());
+			pst.setString(2, reg.getGen());
+			pst.setString(3, reg.getEmail());
+			pst.setString(4, reg.getMobno());
+			pst.setString(5, reg.getAadharid());
+			pst.setString(6, reg.getAddress());
+			pst.setString(7, userid);
+			pst.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			try {
+//				DBConnector db= (DBConnector) DBConnector.getConnected();
+
+				con = DBConnector.getConnected();
+				pst = con.prepareStatement("update sellers set seller_name=?,seller_gen=?,seller_email=?,seller_mob=?,seller_aadhar_vid=?,seller_address=? where seller_id=?");
+				
+				pst.setString(1, reg.getUsernm());
+				pst.setString(2, reg.getGen());
+				pst.setString(3, reg.getEmail());
+				pst.setString(4, reg.getMobno());
+				pst.setString(5, reg.getAadharid());
+				pst.setString(6, reg.getAddress());
+				pst.setString(7, userid);
+				pst.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			}
+
+
+		return "home1";
+	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String register() {
@@ -298,7 +356,7 @@ public class TestController {
 	}
 
 	@RequestMapping(path = "/requestorder", method = RequestMethod.POST)
-	public String sendMessage(@ModelAttribute Order order) {
+	public String requestOrder(@ModelAttribute Order order) {
 		Connection con;
 		CallableStatement cb;
 		PreparedStatement pst;
@@ -348,22 +406,24 @@ public class TestController {
 				
 				con = DBConnector.getConnected();
 				System.out.println("inside try");
-				cb = con.prepareCall("call callOrder(?,?,?,?,?,now(),?,?,?,?,?,?,?);");
-				System.out.println("inside try 2");
+				cb = con.prepareCall("call callOrder (?,?,?,?,?,now(),?,?,?,?,?,?,?);");
+			
 				cb.setString(1, order.getOrderid());
 				cb.setString(2, order.getName());
 				cb.setString(3, order.getCustomerid());
 				cb.setString(4, order.getSellerid());
 				cb.setString(5, order.getProdid());
-				cb.setNString(6, order.getProdTitle());
-				cb.setNString(7, order.getProdUnit());
-				cb.setNString(8, order.getProdQuantity());
+				cb.setString(6, order.getProdTitle());			
+				cb.setString(7, order.getProdUnit());
+				cb.setString(8, order.getProdQuantity());
 				cb.setInt(9, order.getProductPrice());
 				cb.setString(10, order.getPaymenttype());
 				cb.setNString(11, order.getOrderStatus());
 				cb.setNString(12, order.getMessage());
-				boolean s=cb.execute();
-				s=true;
+				System.out.println("inside try 6");
+				cb.execute();
+				System.out.println("inside try 7");
+				boolean s=true;
 				System.out.println(s+" execute query");
 				if(s)
 				{
@@ -377,14 +437,15 @@ public class TestController {
 					{
 					email=rs.getString("seller_email");
 					System.out.println(email);
-					SendMail.sendmail(0,email,order.getMessage());
+					SendMail.sendmail(0,email,"Dear Seller, you have received an order request from "+order.getName()+". He also has a message for you : " +order.getMessage()+"\n Yours Sincerely, \n Farm Market");
 					 System.out.println("email send ");
 					}
 				}
 
 			} catch (Exception ex) {
 				System.out.println("inside order catch");
-				ex.getStackTrace();
+				System.out.println(ex.getStackTrace());
+				System.out.println(ex.getMessage());
 			}
 
 		}
@@ -548,5 +609,19 @@ public class TestController {
 		return "";
 	}
 	
+	@RequestMapping(value = "/trans", method = RequestMethod.GET)
+	public String transaction(HttpSession session) {
+		String usertype=(String) session.getAttribute("usrtype");
+		if(usertype.equals("customers"))
+			return "transaction";
+		else
+			return "transactionseller";
+	}
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "home";
+	}
 
 }

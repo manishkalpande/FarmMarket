@@ -41,48 +41,63 @@
 </head>
 
 <body>
+<%
+String id=(String)session.getAttribute("userid");
+if(id.equals(null))
+	return "home";
+%>
 	<header>
+<div id="man"></div>
+    <div class="header-1">
 
-		<div class="header-1">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
+		<%=session.getId()%>
+        <form action="searchprod" class="search-box-container" method="post">
+            <input type="search" id="search-box" name="search-box" placeholder="search here..." >
+            <label for="search-box" class="fas fa-search" ></label>
+            <input type="submit" value="search">
+        </form>
 
-			<a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm
-				Market 2</a> ${prodnm}
+    </div>
 
-			<form action="" class="search-box-container">
-				<input type="search" id="search-box" placeholder="search here...">
-				<label for="search-box" class="fas fa-search"></label>
-			</form>
+    <div class="header-2">
 
-		</div>
+        <div id="menu-bar" class="fas fa-bars"></div>
 
-		<div class="header-2">
+        <nav class="navbar">
+            <a href="home1">home</a>
+            <a href="#category">category</a>
+            <a href="#product">product</a>
+            <a href="#deal">deal</a>
+            <a href="#contact">contact</a>
+        </nav>
 
-			<div id="menu-bar" class="fas fa-bars"></div>
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+    
+                <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="myacc">My Account</a>
+                    <a class="dropdown-item" href="trans">My Orders</a>
+                    <%
+                    String x =(String)session.getAttribute("usrtype");
+            		if(x.equals("sellers")){
+            			%><a class="dropdown-item" href="addProduct">Add Products</a>
+            			<a class="dropdown-item" href="showProduct">Show Products</a>
+            			<%
+            		}
+                    %>
+                     <a class="dropdown-item" href="changepass">Change Password</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('I am a popup!')">Logout</a>
+                </div>
+                
+           
+        </div>
 
-			<nav class="navbar">
-				<a href="#home">home</a> <a href="#category">category</a> <a
-					href="#product">product</a> <a href="#deal">deal</a> <a
-					href="#contact">contact</a>
-			</nav>
+    </div>
 
-			<div class="icons">
-				<a href="#" class="fas fa-shopping-cart"></a> <a href="#"
-					class="fas fa-heart"></a> <a href="#" class="fas fa-user-circle"
-					class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">My Account</a> <a
-						class="dropdown-item" href="#">My Orders</a> <a
-						class="dropdown-item" href="changepass">Change Password</a> <a
-						class="dropdown-item" href="#">Logout</a>
-				</div>
-
-
-			</div>
-
-		</div>
-
-	</header>
+</header>
 
 	<!-- header section ends -->
 
@@ -144,7 +159,7 @@
 					<span>quantity : </span> <input type="number" min="1" max="1000"
 						value="1"> <span> /kg </span>
 				</div>
-				<a href="#" class="btn">Order</a>
+				<a href="showseller?value=<%=productName%>" class="btn">Order</a>
 			</div>
 			</div>
 	</section>

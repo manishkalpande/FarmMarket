@@ -73,7 +73,7 @@ function ajax1() {
         <div id="menu-bar" class="fas fa-bars"></div>
 
         <nav class="navbar">
-            <a href="#home">home</a>
+            <a href="home1">home</a>
             <a href="#category">category</a>
             <a href="#product">product</a>
             <a href="#deal">deal</a>
@@ -86,8 +86,8 @@ function ajax1() {
     
                 <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">My Account</a>
-                    <a class="dropdown-item" href="#">My Show All s</a>
+                    <a class="dropdown-item" href="myacc">My Account</a>
+                    <a class="dropdown-item" href="trans">My Orders</a>
                     <%
                     String x =(String)session.getAttribute("usrtype");
             		if(x.equals("sellers")){
