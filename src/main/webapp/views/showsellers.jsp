@@ -73,58 +73,72 @@
 </script>
 <body>
 	<%!String sellerId = "";%>
-	<header>
-		<div id="man"></div>
-		<div class="header-1">
+	
+<!-- header section starts  -->
 
-			<a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm
-				Market </a>
-			<%=session.getId()%>
-			<form action="searchprod" class="search-box-container" method="post">
-				<input type="search" id="search-box" name="search-box"
-					placeholder="search here..."> <label for="search-box"
-					class="fas fa-search"></label> <input type="submit" value="search">
-			</form>
+<header>
+<div id="man"></div>
+    <div class="header-1">
 
-		</div>
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
+		Session id:<%=session.getId()%>
+		 <div id="google_element"></div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+function loadGoogleTranslate(){
+    new google.translate.TranslateElement(
+        "google_element"
+    );
+}
+</script>
+        <form action="searchprod" class="search-box-container" method="post">
+            <input type="search" id="search-box" name="search-box" placeholder="search here..." >
+            <label for="search-box" class="fas fa-search" ></label>
+            <input type="submit" value="search">
+        </form>
 
-		<div class="header-2">
+    </div>
 
-			<div id="menu-bar" class="fas fa-bars"></div>
+    <div class="header-2">
 
-			<nav class="navbar">
-				<a href="home1">home</a> <a href="#category">category</a> <a
-					href="#product">product</a> <a href="#deal">deal</a> <a
-					href="#contact">contact</a>
-			</nav>
+        <div id="menu-bar" class="fas fa-bars"></div>
 
-			<div class="icons">
-				<a href="#" class="fas fa-shopping-cart"></a> <a href="#"
-					class="fas fa-heart"></a> <a href="#" class="fas fa-user-circle"
-					class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="myacc">My Account</a> <a
-						class="dropdown-item" href="#">My Show All s</a>
-					<%
-					String x = (String) session.getAttribute("usrtype");
-					if (x.equals("sellers")) {
-					%><a class="dropdown-item" href="addProduct">Add
-						Products</a> <a class="dropdown-item" href="showProduct">Show
-						Products</a>
-					<%
-					}
-					%>
-					<a class="dropdown-item" href="changepass">Change Password</a> <a
-						class="dropdown-item" href="#">Logout</a>
-				</div>
+        <nav class="navbar">
+            <a href="home1">home</a>
+            <a href="#category">category</a>
+            <a href="#product">product</a>
+            <a href="#deal">deal</a>
+            <a href="#contact">contact</a>
+            <a target="_blank" href="https://visualize.data.gov.in/?inst=9ef84268-d588-465a-a308-a864a43d0070&embed=1">OGD Instance Data</a>
+			<a target="_blank" href="weather">weather</a>
+        </nav>
 
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+    
+                <a href="#"class="fas fa-user-circle" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="myacc">My Account</a>
+                    <a class="dropdown-item" href="trans">My Orders</a>
+                    <%
+                    String x =(String)session.getAttribute("usrtype");
+            		if(x.equals("sellers")){
+            			%><a class="dropdown-item" href="addProduct">Add Products</a>
+            			<a class="dropdown-item" href="showProduct">Show Products</a>
+            			<%
+            		}
+                    %>
+                     <a class="dropdown-item" href="changepass">Change Password</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('Are you sure you want to logout?')">Logout</a>
+                </div>
+                
+           
+        </div>
 
-			</div>
+    </div>
 
-		</div>
-
-	</header>
+</header>
 
 	<%
 	String prodnm = (String) request.getParameter("value");

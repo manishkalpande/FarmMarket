@@ -42,7 +42,16 @@
     <div class="header-1">
 
         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Farm Market </a>
-		<%=session.getId()%>
+		Session id:<%=session.getId()%>
+		 <div id="google_element"></div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+function loadGoogleTranslate(){
+    new google.translate.TranslateElement(
+        "google_element"
+    );
+}
+</script>
         <form action="searchprod" class="search-box-container" method="post">
             <input type="search" id="search-box" name="search-box" placeholder="search here..." >
             <label for="search-box" class="fas fa-search" ></label>
@@ -61,6 +70,8 @@
             <a href="#product">product</a>
             <a href="#deal">deal</a>
             <a href="#contact">contact</a>
+            <a target="_blank" href="https://visualize.data.gov.in/?inst=9ef84268-d588-465a-a308-a864a43d0070&embed=1">OGD Instance Data</a>
+			<a target="_blank" href="weather">weather</a>
         </nav>
 
         <div class="icons">
@@ -80,7 +91,7 @@
             		}
                     %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
-                    <a class="dropdown-item" href="logout" onclick="alert('I am a popup!')">Logout</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('Are you sure you want to logout?')">Logout</a>
                 </div>
                 
            

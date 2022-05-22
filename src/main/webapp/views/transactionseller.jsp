@@ -70,6 +70,23 @@
 		return false;
 	}
 </script>
+<script type="text/javascript">
+function toggleDisplay(className, displayState){
+    var elements = document.getElementsByClassName(className)
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+  }
+  function toggle(){
+    document.onclick = function(e) {
+      if (e.target.tagName == 'BUTTON') {
+        var href = e.target.getAttribute("href");
+        toggleDisplay('page', 'none');
+        document.getElementById(href).style.display = 'block';
+      }
+    }
+  }
+</script>
 
 <body>
 <h1>Transaction Seller page</h1>
@@ -116,7 +133,7 @@
             		}
                     %>
                      <a class="dropdown-item" href="changepass">Change Password</a>
-                    <a class="dropdown-item" href="logout" onclick="alert('I am a popup!')">Logout</a>
+                    <a class="dropdown-item" href="logout" onclick="alert('Are you sure you want to logout?')">Logout</a>
                 </div>
                 
            
@@ -160,8 +177,8 @@ display: inline;}
         <div class="action_btn">
             
     
-        <button id="pen" class="action_btn " href="p1" onclick="toggle(this)">Transaction Pendding</button>
-        <button id="com" class="action_btn" href="p2" onclick="toggle(this)">Transaction compelted</button>
+        <button id="pen" class="action_btn " href="p1" onclick="toggle(this)">Transaction Pending</button>
+        <button id="com" class="action_btn" href="p2" onclick="toggle(this)">Transaction completed</button>
        
         </div>
     </div>
@@ -169,6 +186,7 @@ display: inline;}
     <%
 	String sellerid = (String) session.getAttribute("userid");
 	usertype=(String) session.getAttribute("usrtype");
+	out.println(usertype);
 	try {
 
 		Connection con;
@@ -179,21 +197,27 @@ display: inline;}
 		pst = con.prepareStatement("select * from orders1 where seller_id=?;");
 		pst.setString(1, sellerid);
 		rs = pst.executeQuery();
-			//	String usertpye=rs.getString("order_status");
 	
 		out.print("query executed");
-				out.println(sellerid+"  "+rs);
-		while (rs.next()) {
-			
+				out.println(sellerid+"  "+rs.toString());
+	do{
 			out.println("y cha andar");
 			String prod_id=rs.getString("prod_id");
+			out.print(prod_id);
 			String cust_id=rs.getString("cust_id");
+			out.print(cust_id);
 			String prod_title=rs.getString("prod_title");
+			out.print(prod_title);
 			String prod_desc = rs.getString("message");
+			out.print(prod_desc);
 			String name=rs.getString("name");
+			out.print(name);
 			String prod_quantity = rs.getString("prod_quantity");
+			out.print(prod_quantity);
 			String prod_quantity_type = rs.getString("prod_unit");
+			out.print(prod_quantity_type);
 			int prod_price = rs.getInt("prod_price");
+			out.print(prod_price);
 		
 	%>
     <div class="div_screen_contents_frame">
@@ -503,12 +527,13 @@ display: inline;}
            
             
             <%
-		}
+	}while(rs.next());
 	}
 	catch(Exception ex)
 	{
 		out.println("catch pornhubzzz");
 		ex.printStackTrace();
+		ex.getMessage();
 		
 	}
             

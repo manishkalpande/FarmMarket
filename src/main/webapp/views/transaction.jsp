@@ -70,6 +70,23 @@
 		return false;
 	}
 </script>
+<script type="text/javascript">
+function toggleDisplay(className, displayState){
+    var elements = document.getElementsByClassName(className)
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+  }
+  function toggle(){
+    document.onclick = function(e) {
+      if (e.target.tagName == 'BUTTON') {
+        var href = e.target.getAttribute("href");
+        toggleDisplay('page', 'none');
+        document.getElementById(href).style.display = 'block';
+      }
+    }
+  }
+</script>
 
 <body>
 <header>
@@ -159,8 +176,8 @@ display: inline;}
         <div class="action_btn">
             
     
-        <button id="pen" class="action_btn " href="p1" onclick="toggle(this)">Transaction Pendding</button>
-        <button id="com" class="action_btn" href="p2" onclick="toggle(this)">Transaction compelted</button>
+        <button id="pen" class="action_btn" href="p1" onclick="toggle(this)">Transaction Pending</button>
+        <button id="com" class="action_btn" href="p2" onclick="toggle(this)">Transaction completed</button>
        
         </div>
     </div>

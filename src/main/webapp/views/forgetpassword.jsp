@@ -59,7 +59,7 @@ function ajax() {
             <br>
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="email" name="email" class="form-control" />
+          <input type="email" id="email" name="email" class="form-control" required/>
           <label class="form-label" for="form2Example1">Email ID</label>
         </div>
         <button type="submit" class="btn btn-primary btn-block mb-4" onclick= "myFunction()">Generate OTP</button>
@@ -67,7 +67,7 @@ function ajax() {
       <form  name="form" id="form" >
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="number" id="otp" name="otp" class="form-control"/>
+          <input type="number" id="otp" name="otp" class="form-control" required/>
           <label class="form-label" for="form2Example2">4 digit OTP</label>
         </div>
       

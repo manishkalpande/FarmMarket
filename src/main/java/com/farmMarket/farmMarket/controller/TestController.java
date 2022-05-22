@@ -618,6 +618,16 @@ public class TestController {
 			return "transactionseller";
 	}
 	
+	@RequestMapping(value = "/weather", method = RequestMethod.GET)
+	public String showweather(HttpSession session) {
+		return "weather";
+	}
+	
+	@RequestMapping(value = "/payment", method = RequestMethod.GET)
+	public String payment(HttpSession session) {
+		return "payments";
+	}
+	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
