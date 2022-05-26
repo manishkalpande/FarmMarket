@@ -25,10 +25,6 @@ function ajax() {
 		{
 		alert("Send Otp");
 		}
-	else
-		{
-		alert("error");
-		}
   };
   xhr.send(data);
  
@@ -64,7 +60,7 @@ function ajax() {
         </div>
         <button type="submit" class="btn btn-primary btn-block mb-4" onclick= "myFunction()">Generate OTP</button>
       </form>
-      <form  name="form" id="form" >
+      <form  name="form" id="form" method="post" action="verifymail">
         <!-- Password input -->
         <div class="form-outline mb-4">
           <input type="number" id="otp" name="otp" class="form-control" required/>
@@ -98,10 +94,10 @@ function ajax() {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-	<form name="frm" method="post" action="sendemail">
+	<!-- <form name="frm" method="post" action="sendemail">
 	<input type="text" name="email" id="email">Enter email
 	<br>
 	<input type="submit" value="submit"> 
-	</form>
+	</form> -->
 </body>
 </html>

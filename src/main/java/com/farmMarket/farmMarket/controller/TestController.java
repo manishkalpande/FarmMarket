@@ -70,7 +70,7 @@ public class TestController {
 			pst = con.prepareStatement("select * from customers where cust_id=?;");
 			pst.setString(1, id);	
 			rs = pst.executeQuery();
-			System.out.println("try cha andart xxx"+rs);
+		//	System.out.println("try cha andart xxx"+rs);
 
 			if (rs.next()) {
 				System.out.println("if cha andar");
@@ -195,10 +195,10 @@ public class TestController {
 				session.setAttribute("userid", rs.getString("seller_id"));
 				session.setAttribute("usrtype", "sellers");
 				
-				System.out.println("bundi");
+				//System.out.println("bundi");
 				check = true;
 			} else {
-				System.out.println("bhavika");
+				//System.out.println("bhavika");
 				check = false;
 			}
 		} catch (Exception e) {
@@ -449,13 +449,41 @@ public class TestController {
 			}
 
 		}
-		return "";
+		return "home1";
 	}
 
 	@RequestMapping(path = "/forgetpass", method = RequestMethod.GET)
 	public String callforgetpass(@ModelAttribute ChangePassword cp) {
 		String x = cp.getUsrtype();
 		return "forgetpassword";
+	}
+	
+	@RequestMapping(path = "/setpa", method = RequestMethod.POST)
+	public String setnewpass(@ModelAttribute ChangePassword cp) {
+			Connection con;
+			CallableStatement cb;
+			PreparedStatement pst;
+			ResultSet rs;
+			PasswordHashing ph = new PasswordHashing();
+			cp.setPasswd(ph.doHashing(cp.getPasswd()));
+		
+//			System.out.println(order.toString());
+				try {
+					System.out.println("inside try of order");
+					con = DBConnector.getConnected();
+					pst = con.prepareStatement("update customers set cust_pass=? where cust_email=?");
+					pst.setString(1,cp.getPasswd());
+					pst.setString(2,cp.getEmail());
+					int w=pst.executeUpdate();
+					
+					return "home1";
+				}
+				catch(Exception ex)
+				{
+					ex.getStackTrace();
+					ex.getMessage();
+				}
+		return "home1";
 	}
 	
 	
